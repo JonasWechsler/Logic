@@ -1,0 +1,163 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{enumerate}
+
+\title{Get logic'd}
+\author{Jonas Wechsler}
+\date{August 2014}
+
+\begin{document}
+
+\maketitle
+
+\section{Day 1}
+If I am deceived, I exist.
+\\ \underline{If I am not deceived, I do not exist.}
+\\ I exist.
+\section{Day 2}
+An argument is \textbf{valid} if and only if the truth of its premises guarantees the truth of the conclusion. (i.e. there is no case in which all premises are true and the conclusion is false)
+\\An argument is \textbf{vacuously valid} if and only if it is valid and has inconsistent premises.
+\\An argument is \textbf{sound} if it is both valid and the premises are true.
+\\An argument is \textbf{consistent} if and only if there is a case that all sentences are true.
+\\An argument is \textbf{defeasibly valid} if and only if, if the premises are true, it's reasonable to expect the conclusion to be true as well.
+\\A \textbf{counterexample} to an argument is a circumstance in which the premises are true and the conclusion is false.
+\begin{enumerate}
+\item
+\item[A]
+He must have gone to King's Pyland or to Mapleton
+\\\underline{He is not at King's Pyland}
+\\He is at Mapleton
+\item[B]
+The argument is not valid because having gone to King's Pyland or to Mapleton is not equivalent to being at King's Pyland or Mapleton. The first premise does not guarantee that He is eitehr at King's Pyland or at Mapleton, just that he must have gone to one of the two. For example, He could have gone to Mapleton and then gone to San Francisco. In this case, both premises are true and the conclusion is false. The argument is not sound because it is not valid.
+\item
+\item[A]
+The patient will die unless we operate.
+\\\underline{We will operate.}
+\\The patient will not die.
+\item[B]
+The first premise states that if !A then B(if we do not operate then the patient will die), and then it states A, which does not imply !B. Therefore, the argument is invalid, and therefore not sound. 
+\item
+\item[A]
+If I am right, then I am a fool.
+\\\underline{If I am a fool, I am not right.} 
+\\I am no fool.
+\item[B]
+If I am a fool, then I am not right. The first premise does not relate to a situation in which I am not right. Therefore, a situation in which I am a fool would have true premises but a false conclusion. THerefore, the argument is invalid, and therefore not sound.
+\item
+\item[A]
+If I am right, then I'm a fool.
+\\\underline{If I am a fool, I am not right}
+\\I'm not right.
+\item[B]
+If I am right, then the argument is contradictory, making the premises false. If I am not right, then all premises are true and the conclusion is true. Therefore, the argument is valid and sound.
+\item
+\item[A]
+If Einstein's theory of relativity is correct, light bends in the vicinity of the sun.
+\\\underline{Light bends in the vicinity of the sun.}
+\\Einstein's theory of relativity is correct.
+\item[B]
+If Einstein's theory is false, premise number 2 could still be true for some other reason, so both premises are false and the argument is invalid and not sound.
+\item
+\item[A]
+Congress will agree to the cut only if the President announces his support first.
+\\\underline{The President won't announce his support first.}
+\\Congress won't agree to the cut
+\item[B]
+Valid
+\\Sound-ness is difficult to determine.
+\item
+\item[A]
+If you are ambitious, you'll never achieve all your goals.
+\\\underline{Iff you have ambition, life has meaning}
+\\If you achieve all your goals, life has no meaning.
+\item[B]
+Valid
+\\Sound-ness is difficult to determine
+\item
+\item[A]
+If Adams wins the election, Brown will retire to private life.
+\\\underline{If Brown dies before the election, Adams will win it.}
+\\If Brown dies before the election, he will retire to private life.
+\item[B]
+Valid
+\\Not Sound
+\item
+\item[A]
+Holmes is right and the Moriarty is guilty or Holmes is wrong and Thin is guilty.
+\\They are either both guilty or both innocent.
+\\\underline{Holmes is right}
+\\Thin is guilty
+\item[B]
+Valid
+\\Sound-ness is difficult to determine
+\item
+\item[A]
+Mittens meows exactly when she is Hungry.
+\\Mittens is meowing.
+\\\underline{Mittens isn't hungry}
+\\The end of the earth is at hand.
+\item[B]
+invalid
+\\sound-ness is difficult to determine
+\item
+\item[A]
+God cannot be conceived.
+\\\underline{If God can be conceived and does not exist in our reality, then something is conceivable that is greater than God.}
+\\If God can be conceived, God exists in reality.
+\item[B]
+Valid\\
+\\Sound-ness is difficult to determine
+\item
+\item[A]
+God is omnipotent iff he can do everythang.
+\\If he can't make a big stone, he can't do everything.
+\\\underline{If he can make a big stone, he can't do everything.}
+God is either not omnipotent or does not exist in reality.
+\item[B]
+Valid\\
+Sound-ness is controvertial
+\item
+\item[A]
+If the objects of mathematics are material things, then mathematics can't consist entirely of necessary truths.
+\\Mathematical objects are immaterial only if the mind has access to a realm beyond the reach of the senses.
+\\Mathematics does consist of necessary truths.
+\\\underline{The mind has no access to any realm beyond the reach of the senses.}
+\\The objects of mathematics are neither material nor immaterial.	
+\item[B]
+Invalid\\
+Sound-ness is difficult to determine
+\item
+\item[A]
+If the president pursues arms limitations talks, then if he gets the goreign policy mechanism working more harmoniously, the European Left will acquiesce to the placement of additional nuclear weapons in Europe.
+\\\underline{The European left will never acquiesce to that.}
+\\The President won't get the foreign policy mechanism working more harmoniously, or he won't pursue arms limitation talks.
+\item[B]
+Invalid
+\\Sound-ness is difficult to determine
+\item
+\item[A]
+If we continue to run a large trade deficit, then the government will yield to calls for protectionism.
+\\\underline{We won't continue to run a large deficit only if our economy slows down or foreign economies recover.}
+\\If foreign economies don't recover, then the government will resist calls for protectionism only if our economy slows down. 
+\item[B]
+Valid
+\\Sound-ness is difficult to determine
+\item
+\item[A]
+We cannot both maintain high educational standards and accept almost every high school graduate unless we fail large numbers of students when (and only when) many students do poorly.
+\\We will continue to maintain high standards
+\\We will placate the legislature and admit almost all high school graduates.
+\\\underline{We can't both placate the legislature and fail large numbers of students.}
+\\Not many students will do poorly.
+\item[B]
+Valid
+\\Sound-ness is difficult to determine
+\end{enumerate}
+\begin{enumerate}
+\item
+True, an argument is only made invalid if the conclusion is made false.
+\item
+False, if you remove false premises and leave true ones, then the argument can become invalid.
+\end{enumerate}
+\end{document}
+
