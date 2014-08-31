@@ -1,7 +1,7 @@
 \documentclass{article}
 \usepackage[utf8]{inputenc}
 \usepackage{enumerate}
-
+\usepackage{amsmath}
 \title{Get logic'd}
 \author{Jonas Wechsler}
 \date{August 2014}
@@ -14,7 +14,7 @@
 If I am deceived, I exist.
 \\ \underline{If I am not deceived, I do not exist.}
 \\ I exist.
-\section{Day 2}
+\section{Day 2,3}
 An argument is \textbf{valid} if and only if the truth of its premises guarantees the truth of the conclusion. (i.e. there is no case in which all premises are true and the conclusion is false)
 \\An argument is \textbf{vacuously valid} if and only if it is valid and has inconsistent premises.
 \\An argument is \textbf{sound} if it is both valid and the premises are true.
@@ -29,6 +29,15 @@ He must have gone to King's Pyland or to Mapleton
 \\He is at Mapleton
 \item[B]
 The argument is not valid because having gone to King's Pyland or to Mapleton is not equivalent to being at King's Pyland or Mapleton. The first premise does not guarantee that He is eitehr at King's Pyland or at Mapleton, just that he must have gone to one of the two. For example, He could have gone to Mapleton and then gone to San Francisco. In this case, both premises are true and the conclusion is false. The argument is not sound because it is not valid.
+\item[C]
+$A$:He must have gone to King's Pyland.\\
+$B$:He must have gone to Mapleton.\\
+$C$:He is at King's Pyland.\\
+$D$:He is at Mapleton.\\
+\\
+$A \lor B$\\
+\underline{$\lnot C$}\\
+$D$
 \item
 \item[A]
 The patient will die unless we operate.
@@ -36,6 +45,13 @@ The patient will die unless we operate.
 \\The patient will not die.
 \item[B]
 The first premise states that if !A then B(if we do not operate then the patient will die), and then it states A, which does not imply !B. Therefore, the argument is invalid, and therefore not sound. 
+\item[C]
+$D$:The patient will die.\\
+$O$:We will operate.\\
+\\
+$\lnot O \implies D$\\
+\underline{$O$}\\
+$\lnot O$
 \item
 \item[A]
 If I am right, then I am a fool.
@@ -43,6 +59,13 @@ If I am right, then I am a fool.
 \\I am no fool.
 \item[B]
 If I am a fool, then I am not right. The first premise does not relate to a situation in which I am not right. Therefore, a situation in which I am a fool would have true premises but a false conclusion. THerefore, the argument is invalid, and therefore not sound.
+\item[C]
+$R$:I am right.\\
+$F$:I am a fool.\\
+\\
+$R \implies F$\\
+\underline{$F \implies !R$}\\
+$\lnot F$
 \item
 \item[A]
 If I am right, then I'm a fool.
@@ -50,6 +73,13 @@ If I am right, then I'm a fool.
 \\I'm not right.
 \item[B]
 If I am right, then the argument is contradictory, making the premises false. If I am not right, then all premises are true and the conclusion is true. Therefore, the argument is valid and sound.
+\item[C]
+$R$:I am right.\\
+$F$:I am a fool.\\
+\\
+$R \implies F$\\
+\underline{$F \implies !R$}\\
+$\lnot R$
 \item
 \item[A]
 If Einstein's theory of relativity is correct, light bends in the vicinity of the sun.
@@ -57,6 +87,13 @@ If Einstein's theory of relativity is correct, light bends in the vicinity of th
 \\Einstein's theory of relativity is correct.
 \item[B]
 If Einstein's theory is false, premise number 2 could still be true for some other reason, so both premises are false and the argument is invalid and not sound.
+\item[C]
+$E$:Einstein's theory of relativity is correct.\\
+$L$:Light bends in the vicinity of the sun.\\
+\\
+$E \implies L$\\
+\underline{$L$}\\
+$E$
 \item
 \item[A]
 Congress will agree to the cut only if the President announces his support first.
@@ -65,6 +102,13 @@ Congress will agree to the cut only if the President announces his support first
 \item[B]
 Valid
 \\Sound-ness is difficult to determine.
+\item[C]
+$C$:Congress will agree to the cut.\\
+$S$:The president announces his support first.\\
+\\
+$C \implies S$\\
+\underline{$\lnot S$}\\
+$\lnot C$
 \item
 \item[A]
 If you are ambitious, you'll never achieve all your goals.
@@ -73,6 +117,14 @@ If you are ambitious, you'll never achieve all your goals.
 \item[B]
 Valid
 \\Sound-ness is difficult to determine
+\item[C]
+$A$:You are ambitious.\\
+$G$:You achieve all your goals.\\
+$L$:Life has meaning.\\
+\\
+$A \implies \lnot G$\\
+\underline{$A \implies L$}\\
+$G \implies \lnot L$
 \item
 \item[A]
 If Adams wins the election, Brown will retire to private life.
@@ -81,6 +133,14 @@ If Adams wins the election, Brown will retire to private life.
 \item[B]
 Valid
 \\Not Sound
+\item[C]
+$A$:Adams wins the election.\\
+$B$:Brown will retire to private life.\\
+$D$:Brown dies before the election.\\
+\\
+$A \implies B$\\
+\underline{$D \implies A$}\\
+$D \implies B$
 \item
 \item[A]
 Holmes is right and the Moriarty is guilty or Holmes is wrong and Thin is guilty.
@@ -90,6 +150,15 @@ Holmes is right and the Moriarty is guilty or Holmes is wrong and Thin is guilty
 \item[B]
 Valid
 \\Sound-ness is difficult to determine
+\item[C]
+$H$:Holmes is right.\\
+$T$:Thin is guily.\\
+$M$:Moriarty is guilty.\\
+\\
+$(H \land M)\lor(\lnot H \land T)$\\
+$(M \land T)\lor(\lnot M \land \lnot T)$\\
+\underline{$H$}\\
+$T$
 \item
 \item[A]
 Mittens meows exactly when she is Hungry.
@@ -99,6 +168,15 @@ Mittens meows exactly when she is Hungry.
 \item[B]
 invalid
 \\sound-ness is difficult to determine
+\item[C]
+$M$:Mittens meows.\\
+$H$:She is hungry.\\
+$E$:End of the earth is at hand.\\
+\\
+$M \iff H$\\
+$M$\\
+\underline{$\lnot H$}\\
+$E$
 \item
 \item[A]
 God cannot be conceived.
@@ -107,25 +185,53 @@ God cannot be conceived.
 \item[B]
 Valid\\
 \\Sound-ness is difficult to determine
+\item[C]
+$C$:God can be conceived.\\
+$E$:God exists in our reality.\\
+$G$:Something is conceivable that is greater than god.\\
+\\
+$\lnot C$\\
+\underline{$(C \land \lnot E)\implies G$}\\
+$C \implies E$
 \item
 \item[A]
 God is omnipotent iff he can do everythang.
-\\If he can't make a big stone, he can't do everything.
-\\\underline{If he can make a big stone, he can't do everything.}
-God is either not omnipotent or does not exist in reality.
+\\If he can't make a stone so big he can't lift it, he can't do everything.
+\\\underline{If he can make a stone so big he can't life it, he can't do everything.}
+\\God is either not omnipotent or does not exist in reality.
 \item[B]
 Valid\\
 Sound-ness is controvertial
+\item[C]
+$O$:God is omnipotent.\\
+$E$:God can do everything.\\
+$S$:God can make a stone so big he can't lift it.\\
+$G$:God exists in out reality.\\
+\\
+$O \iff E$\\
+$\lnot S \implies \lnot E$\\
+\underline{$S \implies \lnot E$}\\
+$\lnot O \lor \lnot G$
 \item
 \item[A]
-If the objects of mathematics are material things, then mathematics can't consist entirely of necessary truths.
+ If the objects of mathematics are material things, then mathematics can't consist entirely of necessary truths.
 \\Mathematical objects are immaterial only if the mind has access to a realm beyond the reach of the senses.
 \\Mathematics does consist of necessary truths.
-\\\underline{The mind has no access to any realm beyond the reach of the senses.}
+\\\underline{Mathematics does consist of necessary truths, although the mind has no access to any realm beyond the reach of the senses.}
 \\The objects of mathematics are neither material nor immaterial.	
 \item[B]
 Invalid\\
 Sound-ness is difficult to determine
+\item[C]
+$O$:The objects of mathematics are material things.\\
+$T$:Mathematics consists entirely of necessary truths.\\
+$M$:The mind has access to a realm beyond the reach of the senses.\\
+\\
+$O \implies \lnot T$\\
+$O \implies M$\\
+$T$\\
+\underline{$T \land \lnot M$}\\
+$\lnot O \land \lnot \lnot O$
 \item
 \item[A]
 If the president pursues arms limitations talks, then if he gets the goreign policy mechanism working more harmoniously, the European Left will acquiesce to the placement of additional nuclear weapons in Europe.
@@ -134,6 +240,14 @@ If the president pursues arms limitations talks, then if he gets the goreign pol
 \item[B]
 Invalid
 \\Sound-ness is difficult to determine
+\item[C]
+$P$:The president pursues arms limitation talks.\\
+$F$:The president gets the foreign policy mechanism working more harmoniously.\\
+$L$:The European Left will acquiesce to the placement of additional nuclear weapons in Europe.\\
+\\
+$P \implies (F \implies L)$\\
+\underline{$\lnot L$}\\
+$\lnot P \lor \lnot F$
 \item
 \item[A]
 If we continue to run a large trade deficit, then the government will yield to calls for protectionism.
@@ -142,6 +256,15 @@ If we continue to run a large trade deficit, then the government will yield to c
 \item[B]
 Valid
 \\Sound-ness is difficult to determine
+\item[C]
+$D$:We will continue to run a large trade deficit.\\
+$G$:The government will yield to calls for protectionism.\\
+$E$:Our economy slows down.\\
+$F$:Foreign economies recover.\\
+\\
+$D \implies G$\\
+\underline{$\lnot D \implies (E \lor F)$}\\
+$\lnot F \implies (\lnot G \implies E)$
 \item
 \item[A]
 We cannot both maintain high educational standards and accept almost every high school graduate unless we fail large numbers of students when (and only when) many students do poorly.
@@ -152,6 +275,18 @@ We cannot both maintain high educational standards and accept almost every high 
 \item[B]
 Valid
 \\Sound-ness is difficult to determine
+\item[C]
+$E$:We maintain high educational standards.\\
+$A$:We accept almost every high school student.\\
+$F$:We fail large numbers of students.\\
+$S$:Students do poorly.\\
+$P$:We will placate the legislature.\\
+\\
+$\lnot(E \land F)\lor(F \iff S)$\\
+$E$\\
+$P \land A$\\
+\underline{$\lnot (P \land F)$}\\
+$\lnot S$
 \end{enumerate}
 \begin{enumerate}
 \item
