@@ -16,7 +16,7 @@
 If I am deceived, I exist.
 \\ \underline{If I am not deceived, I do not exist.}
 \\ I exist.
-\section{Day 2,3}
+\section{Day 2,3,4}
 An argument is \textbf{valid} if and only if the truth of its premises guarantees the truth of the conclusion. (i.e. there is no case in which all premises are true and the conclusion is false)
 \\An argument is \textbf{vacuously valid} if and only if it is valid and has inconsistent premises.
 \\An argument is \textbf{sound} if it is both valid and the premises are true.
@@ -340,7 +340,7 @@ An argument is \textbf{valid} if and only if the truth of its premises guarantee
 		\underline{$\lnot L$}\\
 		$\lnot P \lor \lnot F$
 	\item[D]
-		\begin{tabular}{>{$}l<{$} |>{$}l<{$} || >{$}c<{$} | >{$}c<{$} || >{$}c<{$}}
+		\begin{tabular}{>{$}l<{$} |>{$}l<{$} |>{$}l<{$} || >{$}c<{$} | >{$}c<{$} || >{$}c<{$}}
 			P & F & L & P \implies (F \implies L) & \lnot L & \lnot P \lor \lnot F \\ \hline
 			T & T & T & T & F & F \\
 			T & T & F & F & T & F \\
@@ -411,6 +411,7 @@ An argument is \textbf{valid} if and only if the truth of its premises guarantee
 		\underline{$\lnot (P \land F)$}\\
 		$\lnot S$
 \end{enumerate}
+\section{Claims}
 \begin{enumerate}
 	\item
 		True, an argument is only made invalid if the conclusion is made false.
@@ -418,23 +419,15 @@ An argument is \textbf{valid} if and only if the truth of its premises guarantee
 		False, if you remove false premises and leave true ones, then the argument can become invalid.
 	\item
 		O moving to either 1 or 7 would make no difference, since the two situations are equivalent after a simple translation.
-		\begin{tabular}{c|c|c}
-			O &   &   & \\ \hline
-			  & X &   & \\ \hline
-			  &   &   & \\
-		\end{tabular}
-		\begin{tabular}{c|c|c}
-			O &   &   & \\ \hline
-			  & X &   & \\ \hline
-			  &   &   & \\
-		\end{tabular}
 
 	\item
 		$(A \land B) \implies C$ \\
 		There is a case where $(A \land B)$ are true but $C$ is false, therefore there is a case where the prepositions are true but the conclusion is false, making the argument invalid.\\
 	\item
 		There are no cases where $(A \land B)$ are true but $C$ is false, so $(A \land B) \implies C$ is always true.
-		
+		The argument A, B, therefore C is valid, therefore there is no case in which A and B are true but C is false, because A and B are premises and C is the conclusion. The only case in which $(A \land B)\implies C$ is false would be when $(A \land B)$ is true but $C$ is false, which we just established will never happen. Therefore, the statement $(A \land B) \implies C$ is always true.
 \end{enumerate}
+\section{Other}
+
 \end{document}
 
