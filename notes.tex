@@ -2,6 +2,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage{enumerate}
 \usepackage{amsmath}
+\usepackage{array}
 
 \title{Get logic'd}
 \author{Jonas Wechsler}
@@ -39,5 +40,46 @@ conjunction $\land$ and\\
 \\
 $((p \implies q) \land  p)\implies q$ Modus ponens\\
 $((p \implies q) \land  !q)\implies !p$ Modus tollens\\
+\section{Day 4}
+\underline{Case}: An assignment of truth values to atomic sentences.\\
+\\
+\\If Einstein's theory of relativity is correct, light bends in the vicinity of the sun.
+\\\underline{Light bends in the vicinity of the sun.}
+\\Einstein's theory of relativity is correct.
+\\
+$E$:Einstein's theory of relativity is correct.\\
+$L$:Light bends in the vicinity of the sun.\\
+\\
+\begin{tabular}{l | l || l | l || l}
+	E & L & $E \implies L$ & L & E\\ \hline
+	T & T & T & T & T\\
+	T & F & F & F & T\\
+	F & T & T & T & F\\
+	F & F & T & F & F\\
+\end{tabular}\\
+\\
+\begin{tabular}{l | l | l || l | l || l}
+	A & G & L & $A \implies \lnot G$ & $L \implies A$ & $G \implies \lnot L$\\ \hline
+	T & T & T & F & T & F\\
+	T & T & F & F & F & T\\
+	T & F & T & T & T & T\\
+	T & F & F & T & F & T\\
+	F & T & T & T & F & F\\
+	F & T & F & T & T & T\\
+	F & F & T & T & F & T\\
+	F & F & F & T & T & T\\
+\end{tabular}\\
+\\
+\begin{tabular}{l | l || l | l | l | l | l}
+	A & B & $\lnot A$ & $A \land B$ & $A \lor B$ & $A \implies B$ & $A \iff B$\\ \hline
+	T & T & F & T & T & T & T\\
+	T & F & F & F & T & F & F\\
+	F & T & T & F & T & T & F\\
+	F & F & T & F & F & T & T\\
+\end{tabular}\\
+\\
+\section{Day 5}
+Raymond Smullyan\\
+
 \end{document}
 
