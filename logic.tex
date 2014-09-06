@@ -4,6 +4,8 @@
 \usepackage{amsmath}
 \usepackage{amstext}
 \usepackage{array}
+\newcommand{\thf}{\rule{\textwidth}{.4pt}}
+
 \title{Get logic'd}
 \author{Jonas Wechsler}
 \date{August 2014}
@@ -14,7 +16,8 @@
 
 \section{Day 1}
 If I am deceived, I exist.
-\\ \underline{If I am not deceived, I do not exist.}
+\\ \thf \\
+If I am not deceived, I do not exist.
 \\ I exist.
 \section{Day 2,3,4}
 An argument is \textbf{valid} if and only if the truth of its premises guarantees the truth of the conclusion. (i.e. there is no case in which all premises are true and the conclusion is false)
@@ -27,7 +30,8 @@ An argument is \textbf{valid} if and only if the truth of its premises guarantee
 	\item
 	\item[A]
 		He must have gone to King's Pyland or to Mapleton
-		\\\underline{He is not at King's Pyland}
+		\\ \thf \\
+		He is not at King's Pyland
 		\\He is at Mapleton
 	\item[B]
 		The argument is not valid because having gone to King's Pyland or to Mapleton is not equivalent to being at King's Pyland or Mapleton. The first premise does not guarantee that He is eitehr at King's Pyland or at Mapleton, just that he must have gone to one of the two. For example, He could have gone to Mapleton and then gone to San Francisco. In this case, both premises are true and the conclusion is false. The argument is not sound because it is not valid.\\
@@ -49,6 +53,8 @@ An argument is \textbf{valid} if and only if the truth of its premises guarantee
 			F & F & F & T & F\\
 		\end{tabular}
 		\\1
+	\item[E]
+		He must either have gone to King's Pyland or to Mapleton. Let's assume he is not at Mapleton. In this case, to satisfy the first premise, he must have gone to King's Pyland, which contradicts the second premise. Therefore, he must have gone to Mapleton.
 	\item
 	\item[A]
 		The patient will die unless we operate.
@@ -88,6 +94,8 @@ An argument is \textbf{valid} if and only if the truth of its premises guarantee
 		\\invalid
 
 	\item
+	\item[E]
+		Suppose $R$ were false and $F$ were true. This does not contradict the statement $R \implies F$, nor the statement $F \implies \lnot R$. However, it does contradict the conclusion. Therefore, the argument is not valid.
 	\item[A]
 		If I am right, then I'm a fool.
 		\\\underline{If I am a fool, I am not right}
@@ -110,7 +118,8 @@ An argument is \textbf{valid} if and only if the truth of its premises guarantee
 			F & F & T & T & T\\
 		\end{tabular}
 		Valid
-
+	\item[E]
+		We assume that $R \implies F$, because this is a premise. We then know that $\lnot F \implies \lnot R$, because this is the contra-positive of a premise. We also know that $F \implies \lnot R$. Therefore, $(\lnot F \lor F) \implies \lnot R$. Since $(\lnot F \lor F)$ is a tautology, $\lnot R$ is true in all cases. Therefore, the argument is valid.
 	\item
 	\item[A]
 		If Einstein's theory of relativity is correct, light bends in the vicinity of the sun.
@@ -148,6 +157,8 @@ An argument is \textbf{valid} if and only if the truth of its premises guarantee
 		$C \implies S$\\
 		\underline{$\lnot S$}\\
 		$\lnot C$
+	\item[E]
+		We know that $C \implies S$ and $\lnot S$. The contra-positive of the first premise is $\lnot S \implies \lnot C$, and since $\lnot S$ is true, $\lnot C$ is true. Therefore, the argument is valid.	
 	\item
 	\item[A]
 		If you are ambitious, you'll never achieve all your goals.
@@ -223,7 +234,9 @@ An argument is \textbf{valid} if and only if the truth of its premises guarantee
 			F & F & T & F & F & F & F \\
 			F & F & F & F & T & F & F \\
 		\end{tabular}\\
-		valid
+		Valid
+	\item[E]
+		We know that either Moriarty and Thin are both guilty, or neither of them are guilty. Therefore, they are both just as guilty: $M \iff T$. If Holmes is right, Thin is guilty, and therefore Moriarty is guilty. If Holmes is wrong (which he isn't), Moriarty is guilty, and therefore Thin is guilty. Therefore, Thin and Moriarty must both be guilty either way. The argument is valid.
 	\item
 	\item[A]
 		Mittens meows exactly when she is Hungry.
@@ -290,6 +303,8 @@ An argument is \textbf{valid} if and only if the truth of its premises guarantee
 		$\lnot S \implies \lnot E$\\
 		\underline{$S \implies \lnot E$}\\
 		$\lnot O \lor \lnot G$
+	\item[E]
+		The second and third premises state that $\lnot S \implies \lnot E$ and $S \implies \lnot E$. Therefore, $(\lnot S \lor S) \implies \lnot E$. Since $(\lnot S \lor S)$ is a tautology, $\lnot E$ must be true. Following the first premise, God, therefore, is not omnipotent, which makes the conclusion true. The argument is, therefore, valid.
 	\item
 	\item[A]
 		If the objects of mathematics are material things, then mathematics can't consist entirely of necessary truths.
@@ -418,16 +433,41 @@ An argument is \textbf{valid} if and only if the truth of its premises guarantee
 	\item
 		False, if you remove false premises and leave true ones, then the argument can become invalid.
 	\item
-		O moving to either 1 or 7 would make no difference, since the two situations are equivalent after a simple translation.
-
+		\begin{tabular}{c|c|c}
+			\ &\ &\ 
+			O &X &\ 
+			\ &\ &\ 
+		\end{tabular}\\	
+		\begin{tabular}{c|c|c}
+			\ &\ &\ 
+			O &X &\ 
+			X &\ &\ 
+		\end{tabular}	
+		Suppose X goes to square 7.\\
+		\begin{tabular}{c|c|c}
+			\ &\ &O 
+			O &X &\ 
+			X &\ &\ 
+		\end{tabular}	
+		O must go to square 3, because otherwise X will win by the diagonal.\\
+		\begin{tabular}{c|c|c}
+			\ &\ &O 
+			O &X &\ 
+			X &\ &X 
+		\end{tabular}	
+		X now has two spots that would yield a victory: Spot 1 and spot 8. If O blocks either one of these spots, X will take the other and win.
 	\item
-		$(A \land B) \implies C$ \\
-		There is a case where $(A \land B)$ are true but $C$ is false, therefore there is a case where the prepositions are true but the conclusion is false, making the argument invalid.\\
+		There is a case where $(A\land B)\implies C$ is false, therefore there is a case where $(A \land B)$ are true but $C$ is false, therefore there is a case where the prepositions are true but the conclusion is false, making the argument invalid.\\
 	\item
 		There are no cases where $(A \land B)$ are true but $C$ is false, so $(A \land B) \implies C$ is always true.
 		The argument A, B, therefore C is valid, therefore there is no case in which A and B are true but C is false, because A and B are premises and C is the conclusion. The only case in which $(A \land B)\implies C$ is false would be when $(A \land B)$ is true but $C$ is false, which we just established will never happen. Therefore, the statement $(A \land B) \implies C$ is always true.
+	\item
+		We said that an argument isn't valid if and only if it's premises are true but the conclusion is false. If the premises are contradictory, then they can't all be true, so there can't be a case where the premises are true but the conclusion is false. The claim does not hold. 
 \end{enumerate}
 \section{Other}
-
+\begin{enumerate}
+	\item
+		Suppose the speaker is a knave. He says that, either he is a knave, or his friend is a knight. He must be lying, which means neither of those things are true, which contradicts our assumption that he is a knave. Therefore, the speaker is a knight. If the speaker is a knight, he must be telling the truth. Since he can't be a knave, his friend must be a knight. Therefore, they are both knights.
+\end{enumerate}
 \end{document}
 

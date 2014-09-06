@@ -10,91 +10,85 @@
 
 \begin{document}
 
-\maketitle
+	\maketitle
 
-\section{Day 1}
-If I am deceived, I exist.
-\\ \underline{If I am not deceived, I do not exist.}
-\\ I exist.
-\section{Day 2}
-An argument is \textbf{valid} if and only if the truth of its premises guarantees the truth of the conclusion. (i.e. there is no case in which all premises are true and the conclusion is false)
-\\An argument is \textbf{vacuously valid} if and only if it is valid and has inconsistent premises.
-\\An argument is \textbf{sound} if it is both valid and the premises are true.
-\\An argument is \textbf{consistent} if and only if there is a case that all sentences are true.
-\\An argument is \textbf{defeasibly valid} if and only if, if the premises are true, it's reasonable to expect the conclusion to be true as well.
-\\A \textbf{counterexample} to an argument is a circumstance in which the premises are true and the conclusion is false.
-\\A proof technique is called \textbf{formal} if and only if it can be carried out by a computer.
-\\\textbf{Theorem-argument exchange theorem}?
-\section{Day 3}
-If I am deceived, then I exist.\\
-If I am not deceived, then I exist\\
-A: I am deceived.\\
-B: I exist.\\
-\\
-\underline{Logical Operators}\\
-negation $\lnot$ not\\
-biconditional $\iff$ if and only if, necessary and sufficient, exactly when\\
-conditional $\implies$ if-then, A only if B\\
-disjunction $\lor$ or\\
-conjunction $\land$ and\\
-\\
-$((p \implies q) \land  p)\implies q$ Modus ponens\\
-$((p \implies q) \land  !q)\implies !p$ Modus tollens\\
-\section{Day 4}
-\underline{Case}: An assignment of truth values to atomic sentences.\\
-\\
-\\If Einstein's theory of relativity is correct, light bends in the vicinity of the sun.
-\\\underline{Light bends in the vicinity of the sun.}
-\\Einstein's theory of relativity is correct.
-\\
-$E$:Einstein's theory of relativity is correct.\\
-$L$:Light bends in the vicinity of the sun.\\
-\\
-\begin{tabular}{l | l || l | l || l}
-	E & L & $E \implies L$ & L & E\\ \hline
-	T & T & T & T & T\\
-	T & F & F & F & T\\
-	F & T & T & T & F\\
-	F & F & T & F & F\\
-\end{tabular}\\
-\\
-\begin{tabular}{l | l | l || l | l || l}
-	A & G & L & $A \implies \lnot G$ & $L \implies A$ & $G \implies \lnot L$\\ \hline
-	T & T & T & F & T & F\\
-	T & T & F & F & F & T\\
-	T & F & T & T & T & T\\
-	T & F & F & T & F & T\\
-	F & T & T & T & F & F\\
-	F & T & F & T & T & T\\
-	F & F & T & T & F & T\\
-	F & F & F & T & T & T\\
-\end{tabular}\\
-\\
-\begin{tabular}{l | l || l | l | l | l | l}
-	A & B & $\lnot A$ & $A \land B$ & $A \lor B$ & $A \implies B$ & $A \iff B$\\ \hline
-	T & T & F & T & T & T & T\\
-	T & F & F & F & T & F & F\\
-	F & T & T & F & T & T & F\\
-	F & F & T & F & F & T & T\\
-\end{tabular}\\
-\\
-\section{Day 5}
-Raymond Smullyan\\
-\textbf{To prove validity:}\\
-\underline{Formal Ways}\\
-\begin{enumerate}\\
-	\item
-		Truth Table\\
-\end{enumerate}\\
-\underline{Informal Ways}\\
-\begin{enumerate}\\
-	\item
-		\underline{Conditional Proof}\\
-		Assume all premises are true, apply definitions, past theorems. Pure light of reason!.\\
-		Show the conclusion is also true.
-		\underline{Proof by contradition}\\
-		Assume argument is invalid (i.e., there's a counter example, i.e. there's a case where all prepositions are true and c is false.)\\
-\end{enumarete}\\
+	\section{Day 1}
+	If I am deceived, I exist.
+	\\ \underline{If I am not deceived, I do not exist.}
+	\\ I exist.
+	\section{Day 2}
+	An argument is \textbf{valid} if and only if the truth of its premises guarantees the truth of the conclusion. (i.e. there is no case in which all premises are true and the conclusion is false)
+	\\An argument is \textbf{vacuously valid} if and only if it is valid and has inconsistent premises.
+	\\An argument is \textbf{sound} if it is both valid and the premises are true.
+	\\An argument is \textbf{consistent} if and only if there is a case that all sentences are true.
+	\\An argument is \textbf{defeasibly valid} if and only if, if the premises are true, it's reasonable to expect the conclusion to be true as well.
+	\\A \textbf{counterexample} to an argument is a circumstance in which the premises are true and the conclusion is false.
+	\\A proof technique is called \textbf{formal} if and only if it can be carried out by a computer.
+	\\\textbf{Theorem-argument exchange theorem}?
+	\section{Day 3}
+	If I am deceived, then I exist.\\
+	If I am not deceived, then I exist\\
+	A: I am deceived.\\
+	B: I exist.\\
+	\\
+	\underline{Logical Operators}\\
+	negation $\lnot$ not\\
+	biconditional $\iff$ if and only if, necessary and sufficient, exactly when\\
+	conditional $\implies$ if-then, A only if B\\
+	disjunction $\lor$ or\\
+	conjunction $\land$ and\\
+	\\
+	$((p \implies q) \land  p)\implies q$ Modus ponens\\
+	$((p \implies q) \land  !q)\implies !p$ Modus tollens\\
+	\section{Day 4}
+	\underline{Case}: An assignment of truth values to atomic sentences.\\
+	\\
+	\\If Einstein's theory of relativity is correct, light bends in the vicinity of the sun.
+	\\\underline{Light bends in the vicinity of the sun.}
+	\\Einstein's theory of relativity is correct.
+	\\
+	$E$:Einstein's theory of relativity is correct.\\
+	$L$:Light bends in the vicinity of the sun.\\
+	\\
+	\begin{tabular}{l | l || l | l || l}
+		E & L & $E \implies L$ & L & E\\ \hline
+		T & T & T & T & T\\
+		T & F & F & F & T\\
+		F & T & T & T & F\\
+		F & F & T & F & F\\
+	\end{tabular}\\
+	\\
+	\begin{tabular}{l | l | l || l | l || l}
+		A & G & L & $A \implies \lnot G$ & $L \implies A$ & $G \implies \lnot L$\\ \hline
+		T & T & T & F & T & F\\
+		T & T & F & F & F & T\\
+		T & F & T & T & T & T\\
+		T & F & F & T & F & T\\
+		F & T & T & T & F & F\\
+		F & T & F & T & T & T\\
+		F & F & T & T & F & T\\
+		F & F & F & T & T & T\\
+	\end{tabular}\\
+	\\
+	\begin{tabular}{l | l || l | l | l | l | l}
+		A & B & $\lnot A$ & $A \land B$ & $A \lor B$ & $A \implies B$ & $A \iff B$\\ \hline
+		T & T & F & T & T & T & T\\
+		T & F & F & F & T & F & F\\
+		F & T & T & F & T & T & F\\
+		F & F & T & F & F & T & T\\
+	\end{tabular}\\
+	\\
+	\section{Day 5}
+	Raymond Smullyan\\
+	\textbf{To prove validity:}\\
+	\underline{Formal Ways}\\
+	Truth Table\\
+	\underline{Informal Ways}\\
+	\underline{Conditional Proof}\\
+	Assume all premises are true, apply definitions, past theorems. Pure light of reason!.\\
+	Show the conclusion is also true.\\
+	\underline{Proof by contradition}\\
+	Assume argument is invalid (i.e., there's a counter example, i.e. there's a case where all prepositions are true and c is false.)\\
 
 \end{document}
 
