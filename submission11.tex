@@ -1,0 +1,476 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=1in]{geometry}
+\usepackage{enumerate}
+\usepackage{amsmath}
+\usepackage{amstext}
+\usepackage{array}
+\newcommand{\thf}{\rule{\textwidth}{.4pt}}
+
+\title{Submission 1.1}
+\author{Jonas Wechsler}
+\date{August, September 2014}
+
+\begin{document}
+
+	\maketitle
+
+	\section{Day 1}
+	Senses are unreliable- everything I see is false, and memory represents thngs that never existed. Body, figure, motion, etc. are all illusions. Although logic could be merely an illusion at the hands of god, it has always been consistent, unlike my senses. Furthermore, whether I am deceived or not, somethng must be having these thoughts, so I must exist in some form.\\\\
+
+	If I am deceived, I exist.\\
+	If I am not deceived, I do not exist.\\
+	\thf \\
+	I exist.
+	\section{Arguments in English}
+	\begin{enumerate}
+		\item
+		\item[A]
+			He must have gone to King's Pyland or to Mapleton
+			\\\underline{He is not at King's Pyland}
+			\\He is at Mapleton
+		\item[B]
+			The argument is not valid because having gone to King's Pyland or to Mapleton is not equivalent to being at King's Pyland or Mapleton. The first premise does not guarantee that He is eitehr at King's Pyland or at Mapleton, just that he must have gone to one of the two. For example, He could have gone to Mapleton and then gone to San Francisco. In this case, both premises are true and the conclusion is false. The argument is not sound because it is not valid.\\
+		\item[C]
+			$A$:He must have gone to King's Pyland.\\
+			$B$:He must have gone to Mapleton.\\
+			$C$:He is at King's Pyland.\\
+			$D$:He is at Mapleton.\\
+			\\
+			$A \lor B$\\
+			\underline{$\lnot C$}\\
+			$D$
+		\item[D]
+			\begin{tabular}{l | l || c | c || r}
+				P & M & $P \lor M$ & $\lnot P$ & $M$\\ \hline
+				T & T & T & F & T\\
+				T & F & T & F & F\\
+				F & T & T & T & T\\
+				F & F & F & T & F\\
+			\end{tabular}
+			\\Valid.
+			\\
+		\item[E]
+			He must either have gone to King's Pyland or to Mapleton. Let's assume he is not at Mapleton. In this case, to satisfy the first premise, he must have gone to King's Pyland, which contradicts the second premise. Therefore, he must have gone to Mapleton.
+		\item
+		\item[A]
+			The patient will die unless we operate.
+			\\\underline{We will operate.}
+			\\The patient will not die.
+		\item[B]
+			The first premise states that if !A then B(if we do not operate then the patient will die), and then it states A, which does not imply !B. Therefore, the argument is invalid, and therefore not sound. 
+		\item[C]
+			$D$:The patient will die.\\
+			$O$:We will operate.\\
+			\\
+			$\lnot O \implies D$\\
+			\underline{$O$}\\
+			$\lnot O$
+		\item
+		\item[A]
+			If I am right, then I am a fool.
+			\\\underline{If I am a fool, I am not right.} 
+			\\I am no fool.
+		\item[B]
+			If I am a fool, then I am not right. The first premise does not relate to a situation in which I am not right. Therefore, a situation in which I am a fool would have true premises but a false conclusion. THerefore, the argument is invalid, and therefore not sound.
+		\item[C]
+			$R$:I am right.\\
+			$F$:I am a fool.\\
+			\\
+			$R \implies F$\\
+			\underline{$F \implies \lnot R$}\\
+			$\lnot F$
+		\item[D]
+			\begin{tabular}{>{$}l<{$} |>{$}l<{$} || >{$}c<{$} | >{$}c<{$} || >{$}c<{$}}
+				R & F & R \implies F & F \implies \lnot R & \lnot F \\ \hline
+				T & T & T & F & F\\
+				T & F & F & T & T\\
+				F & T & T & T & F\\
+				F & F & T & T & T\\
+			\end{tabular}
+			\\invalid\\
+
+		\item
+		\item[E]
+			Suppose $R$ were false and $F$ were true. This does not contradict the statement $R \implies F$, nor the statement $F \implies \lnot R$. However, it does contradict the conclusion. Therefore, the argument is not valid.
+		\item[A]
+			If I am right, then I'm a fool.
+			\\\underline{If I am a fool, I am not right}
+			\\I'm not right.
+		\item[B]
+			If I am right, then the argument is contradictory, making the premises false. If I am not right, then all premises are true and the conclusion is true. Therefore, the argument is valid and sound.
+		\item[C]
+			$R$:I am right.\\
+			$F$:I am a fool.\\
+			\\
+			$R \implies F$\\
+			\underline{$F \implies \lnot R$}\\
+			$\lnot R$
+		\item[D]
+			\begin{tabular}{>{$}l<{$} |>{$}l<{$} || >{$}c<{$} | >{$}c<{$} || >{$}c<{$}}
+				R & F & R \implies F & F \implies \lnot R & \lnot R \\ \hline
+				T & T & T & F & F\\
+				T & F & F & T & F\\
+				F & T & T & T & T\\
+				F & F & T & T & T\\
+			\end{tabular}
+			\\Valid\\
+		\item[E]
+			We assume that $R \implies F$, because this is a premise. We then know that $\lnot F \implies \lnot R$, because this is the contra-positive of a premise. We also know that $F \implies \lnot R$. Therefore, $(\lnot F \lor F) \implies \lnot R$. Since $(\lnot F \lor F)$ is a tautology, $\lnot R$ is true in all cases. Therefore, the argument is valid.
+		\item
+		\item[A]
+			If Einstein's theory of relativity is correct, light bends in the vicinity of the sun.
+			\\\underline{Light bends in the vicinity of the sun.}
+			\\Einstein's theory of relativity is correct.
+		\item[B]
+			If Einstein's theory is false, premise number 2 could still be true for some other reason, so both premises are false and the argument is invalid and not sound.
+		\item[C]
+			$E$:Einstein's theory of relativity is correct.\\
+			$L$:Light bends in the vicinity of the sun.\\
+			\\
+			$E \implies L$\\
+			\underline{$L$}\\
+			$E$
+		\item[D]
+			\begin{tabular}{>{$}l<{$} |>{$}l<{$} || >{$}c<{$} | >{$}c<{$} || >{$}c<{$}}
+				E & L & E \implies L & L & E \\ \hline
+				T & T & T & T & T \\
+				T & F & F & F & T \\
+				F & T & T & T & F \\
+				F & F & T & F & F \\
+			\end{tabular}
+			\\Invalid
+			\\
+		\item
+		\item[A]
+			Congress will agree to the cut only if the President announces his support first.
+			\\\underline{The President won't announce his support first.}
+			\\Congress won't agree to the cut
+		\item[B]
+			Valid
+			\\Sound-ness is difficult to determine.
+		\item[C]
+			$C$:Congress will agree to the cut.\\
+			$S$:The president announces his support first.\\
+			\\
+			$C \implies S$\\
+			\underline{$\lnot S$}\\
+			$\lnot C$
+		\item[E]
+			We know that $C \implies S$ and $\lnot S$. The contra-positive of the first premise is $\lnot S \implies \lnot C$, and since $\lnot S$ is true, $\lnot C$ is true. Therefore, the argument is valid.	
+		\item
+		\item[A]
+			If you are ambitious, you'll never achieve all your goals.
+			\\\underline{Iff you have ambition, life has meaning}
+			\\If you achieve all your goals, life has no meaning.
+		\item[B]
+			Valid
+			\\Sound-ness is difficult to determine
+		\item[C]
+			$A$:You are ambitious.\\
+			$G$:You achieve all your goals.\\
+			$L$:Life has meaning.\\
+			\\
+			$A \implies \lnot G$\\
+			\underline{$A \implies L$}\\
+			$G \implies \lnot L$
+		\item[D]
+			\begin{tabular}{l | l | l || l | l || l}
+				A & G & L & $A \implies \lnot G$ & $L \implies A$ & $G \implies \lnot L$\\ \hline
+				T & T & T & F & T & F\\
+				T & T & F & F & F & T\\
+				T & F & T & T & T & T\\
+				T & F & F & T & F & T\\
+				F & T & T & T & F & F\\
+				F & T & F & T & T & T\\
+				F & F & T & T & F & T\\
+				F & F & F & T & T & T\\
+			\end{tabular}
+			\\
+			Valid
+			\\
+
+		\item[A]
+			If Adams wins the election, Brown will retire to private life.
+			\\\underline{If Brown dies before the election, Adams will win it.}
+			\\If Brown dies before the election, he will retire to private life.
+		\item[B]
+			Valid
+			\\Not Sound
+		\item[C]
+			$A$:Adams wins the election.\\
+			$B$:Brown will retire to private life.\\
+			$D$:Brown dies before the election.\\
+			\\
+			$A \implies B$\\
+			\underline{$D \implies A$}\\
+			$D \implies B$
+		\item
+		\item[A]
+			Holmes is right and the Moriarty is guilty or Holmes is wrong and Thin is guilty.
+			\\They are either both guilty or both innocent.
+			\\\underline{Holmes is right}
+			\\Thin is guilty
+		\item[B]
+			Valid
+			\\Sound-ness is difficult to determine
+		\item[C]
+			$H$:Holmes is right.\\
+			$T$:Thin is guily.\\
+			$M$:Moriarty is guilty.\\
+			\\
+			$(H \land M)\lor(\lnot H \land T)$\\
+			$(M \land T)\lor(\lnot M \land \lnot T)$\\
+			\underline{$H$}\\
+			$T$
+		\item[D]
+			\begin{tabular}{>{$}l<{$} |>{$}l<{$} |>{$}l<{$} || >{$}c<{$} | >{$}c<{$} |>{$}c<{$}|| >{$}c<{$}}
+				H & T & M & (H \land M) \lor (\lnot H \land T) & (M \land T) \lor (\lnot M \land \lnot T) & H & T \\ \hline
+				T & T & T & T & T & T & T \\
+				T & T & F & F & F & T & T \\
+				T & F & T & T & F & T & F \\
+				T & F & F & F & T & T & F \\
+				F & T & T & T & T & F & T \\
+				F & T & F & T & F & F & T \\
+				F & F & T & F & F & F & F \\
+				F & F & F & F & T & F & F \\
+			\end{tabular}\\
+			Valid
+		\item[E]
+			We know that either Moriarty and Thin are both guilty, or neither of them are guilty. Therefore, they are both just as guilty: $M \iff T$. If Holmes is right, Thin is guilty, and therefore Moriarty is guilty. If Holmes is wrong (which he isn't), Moriarty is guilty, and therefore Thin is guilty. Therefore, Thin and Moriarty must both be guilty either way. The argument is valid.
+		\item
+		\item[A]
+			Mittens meows exactly when she is Hungry.
+			\\Mittens is meowing.
+			\\\underline{Mittens isn't hungry}
+			\\The end of the earth is at hand.
+		\item[B]
+			invalid
+			\\sound-ness is difficult to determine
+		\item[C]
+			$M$:Mittens meows.\\
+			$H$:She is hungry.\\
+			$E$:End of the earth is at hand.\\
+			\\
+			$M \iff H$\\
+			$M$\\
+			\underline{$\lnot H$}\\
+			$E$
+		\item
+		\item[A]
+			God cannot be conceived.
+			\\If God can be conceived and does not exist in our reality, then something is conceivable that is greater than God.
+			\\\thf
+			\\If God can be conceived, God exists in reality.
+		\item[B]
+			Valid\\
+			\\Sound-ness is difficult to determine
+		\item[C]
+			$C$:God can be conceived.\\
+			$E$:God exists in our reality.\\
+			$G$:Something is conceivable that is greater than god.\\
+			\\
+			$\lnot C$\\
+			\underline{$(C \land \lnot E)\implies G$}\\
+			$C \implies E$
+		\item[D]
+			\begin{tabular}{>{$}l<{$} |>{$}l<{$} |>{$}l<{$} || >{$}c<{$} | >{$}c<{$} || >{$}c<{$}}
+				C & E & G & \lnot C & (C \land \lnot E)\implies G & C \implies E \\ \hline
+				T & T & T & F & T & T \\
+				T & T & F & F & T & T \\
+				T & F & T & F & T & F \\
+				T & F & F & F & F & F \\
+				F & T & T & T & T & T \\
+				F & T & F & T & T & T \\
+				F & F & T & T & T & T \\
+				F & F & F & T & T & T \\
+			\end{tabular}
+			\\Valid
+		\item
+		\item[A]
+			God is omnipotent iff he can do everythang.
+			\\If he can't make a stone so big he can't lift it, he can't do everything.
+			\\\underline{If he can make a stone so big he can't life it, he can't do everything.}
+			\\God is either not omnipotent or does not exist in reality.
+		\item[B]
+			Valid\\
+			Sound-ness is controvertial
+		\item[C]
+			$O$:God is omnipotent.\\
+			$E$:God can do everything.\\
+			$S$:God can make a stone so big he can't lift it.\\
+			$G$:God exists in out reality.\\
+			\\
+			$O \iff E$\\
+			$\lnot S \implies \lnot E$\\
+			\underline{$S \implies \lnot E$}\\
+			$\lnot O \lor \lnot G$
+		\item[E]
+			The second and third premises state that $\lnot S \implies \lnot E$ and $S \implies \lnot E$. Therefore, $(\lnot S \lor S) \implies \lnot E$. Since $(\lnot S \lor S)$ is a tautology, $\lnot E$ must be true. Following the first premise, God, therefore, is not omnipotent, which makes the conclusion true. The argument is, therefore, valid.
+		\item
+		\item[A]
+			If the objects of mathematics are material things, then mathematics can't consist entirely of necessary truths.
+			\\Mathematical objects are immaterial only if the mind has access to a realm beyond the reach of the senses.
+			\\Mathematics does consist of necessary truths.
+			\\Mathematics does consist of necessary truths, although the mind has no access to any realm beyond the reach of the senses.
+			\\\thf
+			\\The objects of mathematics are neither material nor immaterial.	
+		\item[B]
+			Invalid\\
+			Sound-ness is difficult to determine
+		\item[C]
+			$O$:The objects of mathematics are material things.\\
+			$T$:Mathematics consists entirely of necessary truths.\\
+			$M$:The mind has access to a realm beyond the reach of the senses.\\
+			\\
+			$O \implies \lnot T$\\
+			$O \implies M$\\
+			$T$\\
+			\underline{$T \land \lnot M$}\\
+			$\lnot O \land \lnot \lnot O$
+		\item[D]
+			\begin{tabular}{>{$}l<{$} |>{$}l<{$} |>{$}l<{$} ||>{$}c<{$} | >{$}c<{$} | >{$}c<{$} | >{$}c<{$} || >{$}c<{$}}
+				O & T & M & O \implies \lnot T & O \implies M & T & T \land \lnot M & \lnot O \land \lnot \lnot O \\ \hline
+				T & T & T & F & T & T & F & F \\
+				T & T & F & F & F & T & T & F \\
+				T & F & T & T & T & F & F & F \\
+				T & F & F & T & F & F & F & F \\
+				F & T & T & T & T & T & F & F \\
+				F & T & F & T & T & T & T & F \\
+				F & F & T & T & T & F & F & F \\
+				F & F & F & T & T & F & F & F \\
+			\end{tabular}\\
+			Valid!
+		\item
+		\item[A]
+			If the president pursues arms limitations talks, then if he gets the goreign policy mechanism working more harmoniously, the European Left will acquiesce to the placement of additional nuclear weapons in Europe.
+			\\\underline{The European left will never acquiesce to that.}
+			\\The President won't get the foreign policy mechanism working more harmoniously, or he won't pursue arms limitation talks.
+		\item[B]
+			Invalid
+			\\Sound-ness is difficult to determine
+		\item[C]
+			$P$:The president pursues arms limitation talks.\\
+			$F$:The president gets the foreign policy mechanism working more harmoniously.\\
+			$L$:The European Left will acquiesce to the placement of additional nuclear weapons in Europe.\\
+			\\
+			$P \implies (F \implies L)$\\
+			\underline{$\lnot L$}\\
+			$\lnot P \lor \lnot F$
+		\item[D]
+			\begin{tabular}{>{$}l<{$} |>{$}l<{$} |>{$}l<{$} || >{$}c<{$} | >{$}c<{$} || >{$}c<{$}}
+				P & F & L & P \implies (F \implies L) & \lnot L & \lnot P \lor \lnot F \\ \hline
+				T & T & T & T & F & F \\
+				T & T & F & F & T & F \\
+				T & F & T & T & F & T \\
+				T & F & F & T & T & T \\
+				F & T & T & T & F & T \\
+				F & T & F & T & T & T \\
+				F & F & T & T & F & T \\
+				F & F & F & T & T & T \\
+			\end{tabular}
+			Valid
+		\item
+		\item[A]
+			If we continue to run a large trade deficit, then the government will yield to calls for protectionism.
+			\\\underline{We won't continue to run a large deficit only if our economy slows down or foreign economies recover.}
+			\\If foreign economies don't recover, then the government will resist calls for protectionism only if our economy slows down. 
+		\item[B]
+			Valid
+			\\Sound-ness is difficult to determine
+		\item[C]
+			$D$:We will continue to run a large trade deficit.\\
+			$G$:The government will yield to calls for protectionism.\\
+			$E$:Our economy slows down.\\
+			$F$:Foreign economies recover.\\
+			\\
+			$D \implies G$\\
+			\underline{$\lnot D \implies (E \lor F)$}\\
+			$\lnot F \implies (\lnot G \implies E)$
+		\item[D]
+			\begin{tabular}{>{$}l<{$} |>{$}l<{$} |>{$}l<{$} |>{$}l<{$} || >{$}c<{$} | >{$}c<{$} || >{$}c<{$}}
+				D & G & E & F & D \implies G & \lnot D \implies (E \lor F) & \lnot F \implies (\lnot G \implies E)\\ \hline
+				T & T & T & T & T & T & T \\ 
+				T & T & T & F & T & T & T \\
+				T & T & F & T & T & T & T \\
+				T & F & T & T & F & T & T \\
+				T & F & T & F & F & T & T \\
+				T & F & F & T & F & T & T \\
+				T & F & F & F & F & T & F \\
+				F & T & T & T & T & T & T \\
+				F & T & T & F & T & T & T \\
+				F & T & F & T & T & T & T \\
+				F & F & T & T & T & T & T \\
+				F & F & T & F & T & T & T \\
+				F & F & F & T & T & T & T \\
+				F & F & F & F & T & F & F \\
+			\end{tabular}
+			Valid
+		\item
+		\item[A]
+			We cannot both maintain high educational standards and accept almost every high school graduate unless we fail large numbers of students when (and only when) many students do poorly.
+			\\We will continue to maintain high standards
+			\\We will placate the legislature and admit almost all high school graduates.
+			\\\underline{We can't both placate the legislature and fail large numbers of students.}
+			\\Not many students will do poorly.
+		\item[B]
+			Valid
+			\\Sound-ness is difficult to determine
+		\item[C]
+			$E$:We maintain high educational standards.\\
+			$A$:We accept almost every high school student.\\
+			$F$:We fail large numbers of students.\\
+			$S$:Students do poorly.\\
+			$P$:We will placate the legislature.\\
+			\\
+			$\lnot(E \land F)\lor(F \iff S)$\\
+			$E$\\
+			$P \land A$\\
+			\underline{$\lnot (P \land F)$}\\
+			$\lnot S$
+	\end{enumerate}
+	\section{Claims}
+	\begin{enumerate}
+		\item
+			True, an argument is only made invalid if the conclusion is made false.
+		\item
+			False, if you remove false premises and leave true ones, then the argument can become invalid.
+		\item
+			\begin{tabular}{c|c|c}
+				\ &\ &\ \\ \hline
+				O &X &\ \\ \hline 
+				\ &\ &\ \\ 
+			\end{tabular}\\\\
+			\begin{tabular}{c|c|c}
+				\ &\ &\ \\ \hline  
+				O &X &\ \\ \hline 
+				X &\ &\ \\
+			\end{tabular}\\	
+			Suppose X goes to square 7.\\
+			\begin{tabular}{c|c|c}
+				\ &\ &O \\ \hline 
+				O &X &\ \\ \hline 
+				X &\ &\ \\
+			\end{tabular}\\	
+			O must go to square 3, because otherwise X will win by the diagonal.\\
+			\begin{tabular}{c|c|c}
+				\ &\ &O \\ \hline 
+				O &X &\ \\ \hline 
+				X &\ &X \\ 
+			\end{tabular}	
+			\\X now has two spots that would yield a victory: Spot 1 and spot 8. If O blocks either one of these spots, X will take the other and win.
+		\item
+			There is a case where $(A\land B)\implies C$ is false, therefore there is a case where $(A \land B)$ are true but $C$ is false, therefore there is a case where the prepositions are true but the conclusion is false, making the argument invalid.\\
+		\item
+			There are no cases where $(A \land B)$ are true but $C$ is false, so $(A \land B) \implies C$ is always true.
+			The argument A, B, therefore C is valid, therefore there is no case in which A and B are true but C is false, because A and B are premises and C is the conclusion. The only case in which $(A \land B)\implies C$ is false would be when $(A \land B)$ is true but $C$ is false, which we just established will never happen. Therefore, the statement $(A \land B) \implies C$ is always true.
+		\item
+			We said that an argument isn't valid if and only if its premises are true but the conclusion is false. If the premises are contradictory, then they can't all be true, so there can't be a case where the premises are true but the conclusion is false. The claim does not hold. 
+	\end{enumerate}
+	\section{Other}
+	\begin{enumerate}
+		\item
+			Suppose the speaker is a knave. He says that, either he is a knave, or his friend is a knight. He must be lying, which means neither of those things are true, which contradicts our assumption that he is a knave. Therefore, the speaker is a knight. If the speaker is a knight, he must be telling the truth. Since he can't be a knave, his friend must be a knight. Therefore, they are both knights.
+	\end{enumerate}
+\end{document}
+

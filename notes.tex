@@ -16,7 +16,7 @@
 	If I am deceived, I exist.
 	\\ \underline{If I am not deceived, I do not exist.}
 	\\ I exist.
-	\section{Day 2}
+	\section{Day 2: Validity}
 	An argument is \textbf{valid} if and only if the truth of its premises guarantees the truth of the conclusion. (i.e. there is no case in which all premises are true and the conclusion is false)
 	\\An argument is \textbf{vacuously valid} if and only if it is valid and has inconsistent premises.
 	\\An argument is \textbf{sound} if it is both valid and the premises are true.
@@ -25,7 +25,7 @@
 	\\A \textbf{counterexample} to an argument is a circumstance in which the premises are true and the conclusion is false.
 	\\A proof technique is called \textbf{formal} if and only if it can be carried out by a computer.
 	\\\textbf{Theorem-argument exchange theorem}?
-	\section{Day 3}
+	\section{Day 3: Operators}
 	If I am deceived, then I exist.\\
 	If I am not deceived, then I exist\\
 	A: I am deceived.\\
@@ -40,8 +40,8 @@
 	\\
 	$((p \implies q) \land  p)\implies q$ Modus ponens\\
 	$((p \implies q) \land  !q)\implies !p$ Modus tollens\\
-	\section{Day 4}
-	\underline{Case}: An assignment of truth values to atomic sentences.\\
+	\section{Day 4: More definitions and truth tables}
+	\textbf{Case}: An assignment of truth values to atomic sentences.\\
 	\\
 	\\If Einstein's theory of relativity is correct, light bends in the vicinity of the sun.
 	\\\underline{Light bends in the vicinity of the sun.}
@@ -78,17 +78,65 @@
 		F & F & T & F & F & T & T\\
 	\end{tabular}\\
 	\\
-	\section{Day 5}
+	\section{Day 5: To prove validity}
 	Raymond Smullyan\\
-	\textbf{To prove validity:}\\
-	\underline{Formal Ways}\\
-	Truth Table\\
-	\underline{Informal Ways}\\
-	\underline{Conditional Proof}\\
+	\subsection{Formal Ways}
+	Truth Tables, see Day 4\\\\
+	\subsection{Informal Ways}
+	\textbf{Conditional Proof}\\
 	Assume all premises are true, apply definitions, past theorems. Pure light of reason!.\\
 	Show the conclusion is also true.\\
-	\underline{Proof by contradition}\\
+	\textbf{Proof by contradition}\\
 	Assume argument is invalid (i.e., there's a counter example, i.e. there's a case where all prepositions are true and c is false.)\\
-
+	\section{Day 6:Logical equivalencies}
+	Don't (drink and drive).\\
+	Don't drink or don't drive.\\
+	Drink nand drive.\\
+	Drink only if not driving.\\
+	\\
+	\subsection{Logical Equivalencies}
+	\textbf{DeMorgan's Law:}$\lnot(A \land B)\iff(\lnot A \lor \lnot B)$\\
+	\textbf{Conditional Disjunction:}$(A \implies B)\iff(\lnot A \lor B)$\\
+	\textbf{Contra-positive:}$(A \implies B)\iff(\lnot B \implies \lnot A)$\\
+	\textbf{Definition of Equivalence:}$(A \iff B)\iff((A \implies B)\land(B \implies A))$\\
+	\textbf{Distribution of And over Or:}$(A \land (B \lor C)) \iff ((A \land B) \lor (A \land C))$\\
+	\textbf{Distribution of Or over And:}$A \lor (B \land C) \iff ((A \lor B)\land(A \lor C))$\\
+	\subsection{Some definitions and stuff}
+	\textbf{Main operator: }The most "outer" operator in a logical statement.\\
+	\textbf{Tautology: }Always true; Logically equivalent.\\
+	Logically equivalent : Tautology :: Contradictory sentences : Contradiction\\
+	\textbf{Proofs of iff: }Prove $A \implies B$ and $B \implies A$ to prove $A \iff B$.
+	\section{Day 7:Rules of Inference}
+	\begin{tabular}{>{$}l<{$}}
+		A \\ \hline
+		(A \implies B)\implies B\\
+		(A \lor B)
+	\end{tabular}\\\\
+	\subsection{Natural Deduction}
+	\begin{tabular}{>{$}l<{$} >{$}l<{$} >{$}l<{$}}
+		1. & A \implies \lnot G & P_1 \\
+		2. & L \implies A & P_2 \\
+		3. & G \implies \lnot A & ContraPos(1)\\
+		4. & \lnot A \implies \lnot L & ContraPos(2)\\
+		6. & G \implies \lnot L & Hypothetical Syllogism
+	\end{tabular}\\
+	\begin{tabular}{>{$}l<{$} >{$}l<{$}}
+		M \iff H & P_1 \\
+		M \land \lnot H & P_2 \\
+		M & Simp(2) \\
+		H & DefOfEq(3) \\
+		\lnot H & Simp(2) \\
+		H \lor E & Add(4) \\
+		E \\ 	
+	\end{tabular}\\
+	\begin{tabular}{>{$}l<{$} >{$}l<{$}}
+		O \iff E & P_1 \\
+		\lnot H \implies \lnot E & P_2 \\
+		H \implies \lnot E & P_3 \\
+		H \lor \lnot H & Taut \\
+		\lnot E \lor \lnot E & CD(2,3,4) \\
+		\lnot E & Rep \\
+		\lnot E \lor \lnot O & Add \\
+	\end{tabular}
 \end{document}
 

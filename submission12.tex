@@ -1,0 +1,118 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=1in]{geometry}
+\usepackage{enumerate}
+\usepackage{amsmath}
+\usepackage{amstext}
+\usepackage{array}
+\newcommand{\thf}{\rule{\textwidth}{.4pt}}
+
+\title{Submission 1.2}
+\author{Jonas Wechsler}
+\date{August, September 2014}
+
+\begin{document}
+
+	\maketitle
+	\section{Arguments in English}
+	\begin{enumerate}
+		\item[1]
+			\begin{tabular}{>{$}c<{$} >{$}c<{$}}
+				P \lor M & P_1\\ 
+				\lnot P & P_2\\
+				M & DS(1,2)
+			\end{tabular}
+		\item[4]
+			\begin{tabular}{>{$}c<{$} >{$}c<{$}}
+				R \implies F & P_1 \\
+				F \implies \lnot R & P_2 \\
+				\lnot F \implies \lnot R & ContraPos(1)\\
+				F \lor \lnot F & Taut \\
+				\lnot R \lor \lnot R & CD(2,3,4) \\
+				\lnot R & Rep \\
+			\end{tabular}
+		\item[6]
+			\begin{tabular}{>{$}c<{$} >{$}c<{$}}
+				C \implies P & P_1 \\
+				\lnot P & P_2 \\
+				\lnot P \implies \lnot C & ContraPos(1) \\
+				\lnot C & MP\\
+			\end{tabular}
+		\item[7]
+			\begin{tabular}{>{$}c<{$} >{$}c<{$}}
+				A \implies \lnot G & P_1 \\
+				M \implies A & P_1 \\
+				\lnot \lnot G \implies \lnot A & ContraPos(1) \\
+				G \implies \lnot A & DN \\
+				\lnot A \implies \lnot M & ContraPos(2) \\
+				G \implies \lnot M & HS(4, 5) \\
+			\end{tabular}
+		\item[10]
+			\begin{tabular}{>{$}l<{$} >{$}l<{$}}
+				M \iff H & P_1 \\
+				M \land \lnot H & P_2 \\
+				M & Simp(2) \\
+				H & DefOfEq(3) \\
+				\lnot H & Simp(2) \\
+				H \lor E & Add(4) \\
+				E & DS(5,6)\\
+			\end{tabular}\\
+		\item[12]
+			\begin{tabular}{>{$}l<{$} >{$}l<{$}}
+				O \iff E & P_1 \\
+				\lnot H \implies \lnot E & P_2 \\
+				H \implies \lnot E & P_3 \\
+				H \lor \lnot H & Taut \\
+				\lnot E \lor \lnot E & CD(2,3,4) \\
+				\lnot E & Rep \\
+				\lnot E \lor \lnot O & Add \\
+			\end{tabular}
+		\item[13]
+			\begin{tabular}{>{$}l<{$} >{$}l<{$}}
+				M \implies \lnot N & P_1 \\
+				\lnot M \implies R & P_2 \\
+				N \and \lnot R & P_3 \\
+				\lnot \lnot N \implies \lnot M & ContraPos(1) \\
+
+				\lnot M \land \lnot \lnot M 
+			\end{tabular}
+		\item[14]
+			\begin{tabular}{>{$}l<{$} >{$}l<{$}}
+				P \implies (F \implies E) & P_1 \\
+				\lnot E & P_2 \\
+				\lnot P \lor (F \implies E) & CDis(1) \\
+				\lnot P \lor (\lnot E \implies \lnot F) & ContraPos(3) \\
+				\lnot P \lor \lnot F & MP(2,4)\\
+			\end{tabular}
+		\item[15]
+			\begin{tabular}{>{$}l<{$} >{$}l<{$}}
+				L \implies Y & P_1 \\
+				\lnot L \implies (S \lor R) & P_2 \\
+				\lnot (S \lor R) \implies L & ContraPos(2) \\
+				\lnot (S \lor R) \implies Y & HS(1,3) \\
+				\lnot \lnot (S \lor R) \lor Y & CDis(3) \\ 
+				(S \lor R) \lor Y & DN(4) \\
+				R \lor (Y \lor S) & Commute \lor (5) \\
+				\lnot R \implies (Y \lor S) & CDis(6) \\
+				\lnot R \implies (\lnot Y \implies S) & CDis(7)\\
+			\end{tabular}
+	\end{enumerate}
+	\section{Claims}
+	\begin{enumerate}
+		\item[13]
+			The statement $(A \land B) \land C$ is true if and only if A, B, and C are true. The statement $A \land (B \land C)$ is true if and only if B, C, and A are all true. Therefore, the statements $(A \land B) \land C$ and $A \land (B \land C)$ are equivalent.\\
+			The statement $(A \lor B) \lor C$ is false if and only if A, B, and C are false. The statement $A \lor (B \lor C)$ is false if and only if B, C, and A are all false. Therefore, the statements are equivalent. \\
+			$(F \implies T) \implies F$ is False, while $F \implies (T \implies F)$ is True. Therefore, $A \implies (B \implies C)$ and $(A \implies B) \implies C$ are equivalent.\\
+			The statement $(A \iff B) \iff C$ is true if and only if A, B, and C are all equivalent. (All either true or false.) The statement $A \iff (B \iff C)$ is true if and only if A, B, and C are all equivalent. Therefore, the two statements are equivalent. \\
+		\item[18]
+			The argument \begin{tabular}{c}A\\B\\\hline C\end{tabular} will always be valid, because there is no case in which A and B will be true and C will be false, since there is no case in which C is false. \\
+		\item[19]
+			$(A \lor B)\iff A \iff B$, since $A \iff B$ and $(A \lor A) \iff A$. \\
+		\item[20]
+			
+		\item[21]
+
+		\item[22]
+	\end{enumerate}
+\end{document}
+
