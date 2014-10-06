@@ -17,13 +17,14 @@
 	\section{Arguments in English}
 	\begin{enumerate}
 		\item[1]
-			\begin{tabular}{>{$}c<{$} >{$}c<{$}}
+
+			\begin{tabular}{>{$}l<{$} >{$}l<{$}}
 				P \lor M & P_1\\ 
 				\lnot P & P_2\\
 				M & DS(1,2)
 			\end{tabular}
 		\item[4]
-			\begin{tabular}{>{$}c<{$} >{$}c<{$}}
+			\begin{tabular}{>{$}l<{$} >{$}l<{$}}
 				R \implies F & P_1 \\
 				F \implies \lnot R & P_2 \\
 				\lnot F \implies \lnot R & ContraPos(1)\\
@@ -32,14 +33,14 @@
 				\lnot R & Rep \\
 			\end{tabular}
 		\item[6]
-			\begin{tabular}{>{$}c<{$} >{$}c<{$}}
+			\begin{tabular}{>{$}l<{$} >{$}l<{$}}
 				C \implies P & P_1 \\
 				\lnot P & P_2 \\
 				\lnot P \implies \lnot C & ContraPos(1) \\
 				\lnot C & MP\\
 			\end{tabular}
 		\item[7]
-			\begin{tabular}{>{$}c<{$} >{$}c<{$}}
+			\begin{tabular}{>{$}l<{$} >{$}l<{$}}
 				A \implies \lnot G & P_1 \\
 				M \implies A & P_1 \\
 				\lnot \lnot G \implies \lnot A & ContraPos(1) \\
@@ -107,12 +108,47 @@
 		\item[18]
 			The argument \begin{tabular}{c}A\\B\\\hline C\end{tabular} will always be valid, because there is no case in which A and B will be true and C will be false, since there is no case in which C is false. \\
 		\item[19]
-			$(A \lor B)\iff A \iff B$, since $A \iff B$ and $(A \lor A) \iff A$. \\
+			$(A \lor B)\iff A \iff B$, since $A \iff B$ (A and B are logically equivalent) and $(A \lor A) \iff A$. \\
 		\item[20]
-			
+			$A \lor B$ is contingent, because both A and B are contingent.
 		\item[21]
-
+			\begin{tabular}{>{$}c<{$}|>{$}c<{$}||>{$}c<{$}||>{$}c<{$}}
+				A & B & (\lnot A \implies B) & A \lor B \\ \hline
+				T & T & T & T \\
+				T & F & T & T \\
+				F & T & T & T \\
+				F & F & F & F \\
+			\end{tabular}\\
+			\begin{tabular}{>{$}c<{$}|>{$}c<{$}||>{$}c<{$}||>{$}c<{$}}
+				A & B & \lnot ( A \implies \lnot B) & A \land B \\ \hline
+				T & T & T & T \\
+				T & F & F & F \\
+				F & T & F & F \\
+				F & F & F & F \\
+			\end{tabular}\\
+			\begin{tabular}{>{$}c<{$}|>{$}c<{$}||>{$}c<{$}||>{$}c<{$}}
+				A & B & \lnot ((A \implies B) \implies \lnot (B \implies A))& A \iff B \\ \hline
+				T & T & T & T \\
+				T & F & F & F \\
+				F & T & F & F \\
+				F & F & T & T \\
+			\end{tabular}
 		\item[22]
+			\begin{tabular}{>{$}c<{$}|>{$}c<{$}||>{$}c<{$}||>{$}c<{$}}
+				A & B & \lnot(\lnot A \lor \lnot B) & A \land B \\ \hline
+				T & T & T & T \\
+				T & F & F & F \\
+				F & T & F & F \\
+				F & F & F & F \\
+			\end{tabular}\\
+			\begin{tabular}{>{$}c<{$}|>{$}c<{$}||>{$}c<{$}||>{$}c<{$}}
+				A & B & \lnot A \lor B & A \implies B \\ \hline
+				T & T & T & T \\
+				T & F & F & F \\
+				F & T & T & T \\
+				F & F & T & T \\
+			\end{tabular}\\
+			We have already Proven that $\implies$ and $\land$ are possible using this logical system, and $((A \implies B)\land(B \implies A))$ is equivalent to $A \iff B$, therefore $\iff$ exists in this logical system.
 	\end{enumerate}
 \end{document}
 

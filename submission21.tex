@@ -1,0 +1,200 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=1in]{geometry}
+\usepackage{enumerate}
+\usepackage{amsmath}
+\usepackage{amstext}
+\usepackage{array}
+\newcommand{\thf}{\rule{\textwidth}{.4pt}}
+
+\title{Submission 2.1}
+\author{Jonas Wechsler}
+\date{October 2014}
+
+\begin{document}
+	\maketitle
+	\section{Translate into English}
+	\begin{enumerate}
+		\item
+			For all x and y, if x is a person and y is a time, and x is down and out at time y, then there does not exist a person z that knows x at time y.\\
+			If x is down and out at y, then nobody knows him at that time.
+	\end{enumerate}
+	\section{Translate into quantificational logic}
+	\begin{enumerate}
+		\item
+			$W_x$: x is well\\
+			$E_x$: x ends well\\
+			$\forall _x(E_x \implies W_x)$\\
+		\item
+			$S_x$: x is seen\\
+			$T_x$: x is temporal\\
+			$E_x$: x is eternal\\
+			$\forall _x((S_x \implies T_x)\land(\lnot S_x \implies E_x))$\\
+		\item
+			$B_x$: x is an object in B\\
+			$A_x$: x is an object in A\\
+			$\forall _x(A_x \implies B_x)$\\
+		\item
+			$A_x$: x is an object in A\\
+			$B_x$: x is an object in B\\
+			$\forall _x((A_x \implies \lnot B_x)\land(B_x \implies \lnot A_x))$\\
+		\item
+			$A_x$: x is an object in A\\
+			$B_x$: x is an object in B\\
+			$\exists _x(A_x \land B_x)$\\
+		\item
+			$Y_x$: x loves themself\\
+			$A_x$: x loves anybody else\\
+			$\forall _x(\lnot Y_x \implies \lnot A_x)$\\
+		\item
+			$A_x$: x is the best band ever!\\
+			$N_x$: x is N' Sync\\
+			$\forall _x(N_x \iff A_x)$\\
+
+	\end{enumerate}
+	\section{Section 2.8.3}
+	\begin{enumerate}
+		\item[11.]
+			$L_{xy}$:x loves y\\
+			$\exists _x \forall _y (L_{xy})$\\
+		\item[12.]
+			$F_{xy}$:x is for y\\
+			$\forall _y \exists _x (F_{xy})$\\
+		\item[13.]
+			$L_{xy}$:x loves y\\
+			$S_x$: x is Scrooge\\
+			$\exists _x \forall _y (S_x) \land \lnot (L_{sy})$\\
+		\item[14.]
+			$S_x$: x is shallow\\
+			$K_x$: x knows himself\\
+			$\forall _x (S_x \iff K_x)$\\
+		\item[15.]
+			$M_x$: x has a mother\\
+			$\forall _x (M_x)$\\
+		\item[19.]
+			$P_x$: x is a pig\\
+			$\exists _x \exists _y ((x \neq y)\land P_x \land P_y)$\\
+		\item[20.]
+			$P_x$: x is a pig\\
+			$\exists _x \exists _y ((x \neq y) \land P_x \land P_y \land \lnot \exists _z ((x \neq z) \land (y \neq z)))$\\
+		\item[21.]
+			$P_x$: x is a pig\\
+			$(\exists _x \exists _y) \implies ((x \neq y) \land P_x \land P_y \land \lnot \exists _z ((x \neq z) \land (y \neq z)))$\\
+	\end{enumerate}
+	\section{Section 2.8.4}
+	\begin{enumerate}
+		\item
+		\item[a]
+			$C_{xy}$: x is caused by y\\
+			\begin{tabular}{l}
+				$\forall _y \exists _x (C_{xy})$\\ \hline
+				$\exists _y \forall _x (C_{xy})$\\
+			\end{tabular}
+		\item
+		\item[a]
+			$H_{xy}$: x hates y\\
+			$f$: Fred\\
+			$a$: Al\\
+			\begin{tabular}{l}
+				$\forall _x (H_{xa} \implies H_{fx})$\\
+				$\forall _x H_{ax}$\\ \hline
+				$H_{af} \land H_{fa}$\\
+			\end{tabular}
+		\item
+		\item[a]
+			$L_x$: x is large and hostile\\
+			$I_x$: x is impervious to pesticides\\
+			$i$: An insect in this house\\
+			\begin{tabular}{l}
+				$\forall _i (L_i)$\\
+				$\exists _i (I_i)$\\\hline
+				$\exists _i (L_i \land I_i)$\\
+			\end{tabular}
+		\item
+		\item[a]
+			$S_x$: x can succeed at the university\\
+			$B_x$: x is bright\\
+			$M_x$: x is mature\\
+			$s$: student\\
+			\begin{tabular}{l}
+				$\exists _s \lnot S_s$\\
+				$(B_s \land M_x) \implies (S_s)$\\ \hline
+				$\exists _x (\lnot B_x \lor \lnot M_x)$\\
+			\end{tabular}
+		\item
+		\item[a]
+			$P_x$: x is a pig\\
+			\begin{tabular}{l}
+				$\exists _x \exists _y \exists _z ((x \neq y)\land(x \neq z)\land(z \neq y)\land P_x \land P_y \land P_z)$\\ \hline
+				$\exists _x \exists _y ((x \neq y)\land P_x \land P_y)$\\
+			\end{tabular}
+		\item
+		\item[a]
+			$L_{xy}$: x likes y\\
+			$p$: Popeye\\
+			$o$: Olive Oyl\\
+			\begin{tabular}{l}
+				$\forall x (L_{xo} \implies L_{px})$\\
+				$\forall x (L_{ox})$\\ \hline
+				$L_{po} \land L_{op}$\\
+			\end{tabular}
+		\item
+		\item[a]
+			$S_x$: x is sound\\
+			$C_x$: x has a true conclusion\\
+			$a$: this argument\\
+			\begin{tabular}{l}
+				$\lnot C_a$\\
+				$\lnot \exists _x (S_x \land \lnot C_x)$\\ \hline
+				$\lnot S_a$\\
+			\end{tabular}
+		\item
+		\item[a]
+			$O_x$: x weighs over 200 pounds\\
+			$j$: Jones' killer\\
+			$s$: Smith\\
+			\begin{tabular}{l}
+				$O_j$\\
+				$\lnot O_s$\\ \hline
+				$O_s \neq O_j$\\
+			\end{tabular}
+
+		\item
+		\item[a]
+			$L_{xy}$: x likes y\\
+			$m$: mandy\\
+			$a$: andy\\
+			\begin{tabular}{l}
+				$\forall _x(L_{xm})$\\
+				$\forall _x(L_{mx} \iff (x = a))$\\ \hline
+				$m = a$
+			\end{tabular}
+
+		\item
+		\item[a]
+			$A_{xy}$: x if afraid of y\\
+			$h$: Mr. Hyde\\
+			$j$: Dr. Jekyll\\
+			\begin{tabular}{l}
+				$\forall _x (A_{xh})$\\
+				$\forall _x (A_{hx} \iff (x = j))$\\ \hline
+				$j = h$
+			\end{tabular}
+
+	\end{enumerate}
+	\section{Section 2.8.5}
+	\begin{enumerate}
+		\item
+		\item[a] This argument is invalid.
+		\item[b] Assume the premises are true. Consider a case in which x is not in F or H, but is in G. This does not contradict any of the premises, because none of the premises have a true antecedent. However, this contradicts the conclusion because its antecedent is true but its consequent is false. Therefore, the argument is valid.
+		\item
+		\item[a] This argument is valid.
+		\item
+		\item[a] This argument is invalid.
+		\item[b] Assume the premises are true. Consider a case in which x is a part of G but not a part of F. This does not contradict the premise because that premise's antecedent is false. This does contradict the conclusion because its antecedent is true but its consequent is false. Therefore, the argument is invalid.
+		\item
+		\item[a] This argument is invalid.
+		\item[b] Assume the premises are true. Consider a case in which x is a part of F and H, but not G. Because x is not a part of both F and G, the first premise is still true. Because the antecedent of the second premise is false, it is also still true. However, because the antecedent of the conclusion is true, but its consequent is false, the conclusion is false. Therefore, the argument is invalid.
+	\end{enumerate}
+\end{document}
+

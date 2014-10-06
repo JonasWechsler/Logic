@@ -20,7 +20,7 @@
 	An argument is \textbf{valid} if and only if the truth of its premises guarantees the truth of the conclusion. (i.e. there is no case in which all premises are true and the conclusion is false)
 	\\An argument is \textbf{vacuously valid} if and only if it is valid and has inconsistent premises.
 	\\An argument is \textbf{sound} if it is both valid and the premises are true.
-	\\An argument is \textbf{consistent} if and only if there is a case that all sentences are true.
+	\\A set of sentences is \textbf{consistent} if and only if there is a case that all sentences are true.
 	\\An argument is \textbf{defeasibly valid} if and only if, if the premises are true, it's reasonable to expect the conclusion to be true as well.
 	\\A \textbf{counterexample} to an argument is a circumstance in which the premises are true and the conclusion is false.
 	\\A proof technique is called \textbf{formal} if and only if it can be carried out by a computer.
@@ -120,23 +120,94 @@
 		4. & \lnot A \implies \lnot L & ContraPos(2)\\
 		6. & G \implies \lnot L & Hypothetical Syllogism
 	\end{tabular}\\
-	\begin{tabular}{>{$}l<{$} >{$}l<{$}}
-		M \iff H & P_1 \\
-		M \land \lnot H & P_2 \\
-		M & Simp(2) \\
-		H & DefOfEq(3) \\
-		\lnot H & Simp(2) \\
-		H \lor E & Add(4) \\
-		E \\ 	
+	\begin{tabular}{l >{$}l<{$} >{$}l<{$}}
+		1. & M \iff H & P_1 \\
+		2. & M \land \lnot H & P_2 \\
+		3. & M & Simp(2) \\
+		4. & H & DefOfEq(3) \\
+		5. & \lnot H & Simp(2) \\
+		6. & H \lor E & Add(4) \\
+		7. & E \\ 	
 	\end{tabular}\\
-	\begin{tabular}{>{$}l<{$} >{$}l<{$}}
-		O \iff E & P_1 \\
-		\lnot H \implies \lnot E & P_2 \\
-		H \implies \lnot E & P_3 \\
-		H \lor \lnot H & Taut \\
-		\lnot E \lor \lnot E & CD(2,3,4) \\
-		\lnot E & Rep \\
-		\lnot E \lor \lnot O & Add \\
+	\begin{tabular}{l  >{$}l<{$} >{$}l<{$}}
+		1. & O \iff E & P_1 \\
+		2. & \lnot H \implies \lnot E & P_2 \\
+		3. & H \implies \lnot E & P_3 \\
+		4. & H \lor \lnot H & Taut \\
+		5. & \lnot E \lor \lnot E & CD(2,3,4) \\
+		6. & \lnot E & Rep \\
+		7. & \lnot E \lor \lnot O & Add \\
 	\end{tabular}
+	\section{Day 8}
+	A sentence is a \textbf{contradiction} iff it can be worked into the form $A \land \lnot A$. \\
+	A sentence is a \textbf{tautology} iff it can be worked into the form $A \lor \lnot A$. \\
+	$\lnot (G \land M)$\\
+	$\lnot M \implies S$\\
+	$S \implies \lnot G$\\
+	$\lnot M \implies \lnot G$\\
+	$G \implies M$\\
+	$G \lor \lnot M$\\
+	$\lnot G \lor \lnot M$\\
+	Valid\\
+	Assume all premises are true. By DeMorgan's Law, $\lnot G \lor \lnot M$ 
+	\section{Day 12}
+	\textbf{Universal quantification:} $\forall$ for all \\
+	\textbf{Existential quantification:} $\exists$ there exists\\
+	\\
+	Subjects are lowercase letters, predicates are uppercase letters.\\
+	\begin{tabular}{l l}
+		$M_s$ & "Socrates is a man"\\	
+		$\forall _x(M_x \implies R_x)$ & "For all x, if x is a man, x is mortal"\\ \hline
+		$R_s$ & "Socrates is mortal"
+	\end{tabular}
+	\section{Day 13}
+	\begin{tabular}{>{$}l<{$} l}
+		c: & Charlie\\
+		P_x: & x is a pig\\
+		E_{xy}: & x = y\\\hline
+		P_c
+	\end{tabular}\\
+	\\
+	"I have at least 2 pigs."\\
+	$\exists _x \exists _y(x \neq y \land P_x \land P_y)$\\
+	$P_x$: x is a Pig\\
+	\\
+	"I have only 2 pigs."\\
+	$\exists _x \exists _y \forall _z(x \neq y \land x \neq z \land y \neq z \land P_x \land P_y \land \lnot P_z)$ No! Bad!\\
+	\\
+	$\exists _x \exists _y \forall _z[(x \neq y \land P_x \land P_y)\land \lnot(x \neq y \neq z \land P_z)]$ \\
+	$\exists _x \exists _y (x \neq y \land P_x \land P_y \land \forall _z ((x \neq z \land y \neq z) \implies \lnot P_z))$ \\
+	$\exists _x \exists _y (x \neq y \land P_x \land P_y \land \forall _z (P_z \implies (x=z \lor y=z))$ \\
+	\\
+	\textbf{Leibniz's Law:} Indiscernibility of Identicals.\\
+	$\forall _a \forall _b (a = b \implies (P_a \iff P_b))$\\
+	$\forall P$ would be invalid, because it is $2^{\underline{nd}}$ order logic.\\
+	\section{Day 14}
+	$S_x$: x is sound\\
+	$C_x$: x's conclusion is true\\
+	$\lnot S_x \land \lnot C_x \land \lnot \exists _x(S_x \land C_x)$\\
+	\\
+	"Consider the case in which.." NOT "Assume..."\\
+	\\
+	Here is an invalid argument:\\
+	\begin{tabular}{l}
+		$\exists _x \exists _y (P_x \land P_y \land x \neq y)$\\\hline
+		$\exists _x \exists _y \exists _z (P_x \land P_y \land P_z \land x \neq y \land x \neq z \land y \neq z)$
+	\end{tabular}\\
+	$UD: 1,2,3 \leftarrow Universe of discourse$\\
+	$P_x = 1,2 \leftarrow extensions$\\
+	case:TFL::interpretation:QL\\
+	\\
+	\textbf{Universe of Discourse(UD):} The universe we're discoursin' about.\\
+	\\
+	Everything has a cause. Therefore, something is the cause of everything.\\
+	$C_{xy}$: x was caused by y.\\
+	\begin{tabular}{l}
+		$\forall _x ( \exists _y(C_{xy}))$\\\hline
+		$\exists _y ( \forall _x(C_{xy}))$
+	\end{tabular}\\
+	$UD: \{ 1, 2 \} $\\
+	$C_{xy} = \{ (1,2), (2,1) \}$\\
+
 \end{document}
 
