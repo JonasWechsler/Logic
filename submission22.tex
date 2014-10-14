@@ -1,0 +1,193 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=1in]{geometry}
+\usepackage{enumerate}
+\usepackage{amsmath}
+\usepackage{amstext}
+\usepackage{array}
+\newcommand{\thf}{\rule{\textwidth}{.4pt}}
+
+\title{Submission 2.2}
+\author{Jonas Wechsler}
+\date{October 2014}
+
+\begin{document}
+	\maketitle
+	\section{Arguments in English 2.8.4}
+	\begin{enumerate}
+		\item
+			\begin{enumerate}
+				\item[b]
+					Invalid\\
+					Unsound	
+				\item[d]
+					$C_{xy}$: x is caused by y\\ 
+					\begin{tabular}{l l}
+						1. $\forall _y \exists _x (C_{xy})$\\
+						2. $\exists _y \forall _x (C_{xy})$\\
+					\end{tabular}
+			\end{enumerate}
+		\item
+			\begin{enumerate}
+				\item[b]
+					Valid\\
+					Invalid
+				\item[d]
+					$H_{xy}$: x hates y\\ 
+					$f$: Fred\\
+					$a$: Al\\
+					\begin{tabular}{l l}
+						1. $\forall _x (H_{xa} \implies H_{fx})$ & $P_1$\\
+						2. $\forall _x H_{ax}$ & $P_1$\\ 
+						3. $H_{aa}$ & UI(2)\\
+						4. $H_{aa} \implies H_{fa}$ & UI(1)\\
+						6. $H_{fa}$ & MP(3,4) \\
+						7. $H_{af}$ & UI(2) \\
+						8. $H_{af} \land H_{fa}$ & Conj(6,7)\\
+					\end{tabular}
+
+			\end{enumerate}
+		\item
+			\begin{enumerate}
+				\item[b]
+					Valid\\
+					Soundness is difficult to determine
+				\item[d]
+					$L_x$: x is large and hostile\\
+					$I_x$: x is impervious to pesticides\\
+					$i$: An insect in this house\\
+					\begin{tabular}{l l}
+						1. $\forall _i (L_i)$ & $P_1$\\
+						2. $\exists _i (I_i)$ & $P_2$\\
+						3. $L_x$ & $UI(1)$\\
+						4. $I_x$ & $EI(2)$ \\
+						5. $L_x \land I_x$ & $Conj(3,4)$\\
+						6. $\exists _i (L_i \land I_i)$ & EG(5)
+					\end{tabular}
+			\end{enumerate}
+		\item
+			\begin{enumerate}
+				\item[b]
+					Valid\\
+					Sound
+				\item[d]
+					$S_x$: x can succeed at the university\\
+					$B_x$: x is bright\\
+					$M_x$: x is mature\\
+					$s$: student\\
+					\begin{tabular}{l l}
+						1. $\exists _s \lnot S_s$ & $P_1$\\
+						2. $(B_s \land M_x) \implies (S_s)$ & $P_2$\\
+						3. $\lnot (S_s) \implies \lnot(B_s \land M_x)$ & CP(2)\\
+						4. $\lnot (S_s) \implies \lnot B_s \lor \lnot M_x$ & DM(3)\\
+						5. $\lnot S_x$ & EI(1)\\
+						6. $\lnot B_x \lor \lnot M_x$ & MP(4,5)\\
+						7. $\exists _x (\lnot B_x \lor \lnot M_x)$ & EG(6)\\
+					\end{tabular}
+			\end{enumerate}
+		\item
+			\begin{enumerate}
+				\item[b]
+					Valid\\
+					Sound
+				\item[d]
+					$P_x$: x is a pig\\
+					\begin{tabular}{l l}
+						1. $\exists _x \exists _y \exists _z ((x \neq y)\land(x \neq z)\land(z \neq y)\land P_x \land P_y \land P_z)$ & $P_1$\\
+						2. $\exists _x \exists _y ((x \neq y) \land (x \neq a) \land (a \neq y) \land P_x \land P_y \land P_a)$ & $EI(1)$\\
+						3. $\exists _x \exists _y ((x \neq y)\land P_x \land P_y)$ & Simp(2)\\
+					\end{tabular}
+			\end{enumerate}
+		\item
+			\begin{enumerate}
+				\item[b]
+					Valid
+					Sound
+				\item[d]
+					$L_{xy}$: x likes y\\
+					$p$: Popeye\\
+					$o$: Olive Oyl\\
+					\begin{tabular}{l l}
+						1. $\forall x (L_{xo} \implies L_{px})$ & $P_1$\\
+						2. $\forall x (L_{ox})$ & $P_2$\\
+						3. $L_{oo}$ & UI(2)\\
+						4. $L_{oo} \implies L_{po}$ & UI(1)\\
+						5. $L_{po}$ & MP(3,4)\\
+						6. $L_{op}$ & UI(2)\\
+						6. $L_{po} \land L_{op}$ & Conj(5,6)\\
+					\end{tabular}
+			\end{enumerate}
+		\item[7.]
+			\begin{enumerate}
+				\item[a]
+					$S_x$: x is sound\\
+					$C_x$: x has a true conclusion\\
+					$a$: this argument\\
+					\begin{tabular}{l}
+						$\lnot C_a$\\
+						$\lnot \exists _x (S_x \land \lnot C_x)$\\ \hline
+						$\lnot S_a$\\
+					\end{tabular}
+				\item[b]
+				\item[c]
+					Assume there is an interpretation in which $\lnot C_x$ and $\lnot \exists _x (S_x \land \lnot C_x)$ are both true, but $\lnot S_x$ is false. So there must be some element of UD, call it 1, such that $(1 \ni S)$ and $\lnot (1 \ni C)$. However, the second premise would be false in this interpretation. $\rightarrow \leftarrow$ No such interpretation.i
+				\item[d]
+					$S_x$: x is sound\\
+					$C_x$: x has a true conclusion\\
+					$a$: this argument\\
+					\begin{tabular}{l l}
+						1. $\lnot C_a$ & $P_1$\\
+						2. $\lnot \exists _x (S_x \land \lnot C_x)$ & $P_2$\\
+						3. $\forall _x \lnot (S_x \land \lnot C_x)$ & QEx(2)\\
+						4. $\forall _x (\lnot S_x \lor \lnot \lnot C_x)$ & DM(3)\\
+						5. $\forall _x (\lnot S_x \lor C_x)$ & DN(4)\\
+						6. $\lnot S_a \lor C_a$ & UI(5)\\
+						7. $S_a \implies C_a$ & CSis(6)\\
+						8. $\lnot C_a \implies \lnot S_a$ & CP(7)\\
+						4. $\lnot S_a$ & MP(1,8)\\
+					\end{tabular}
+
+			\end{enumerate}
+		\item[8.]
+			\begin{enumerate}
+				\item[a]
+					$O_x$: x weighs over 200 pounds\\
+					$j$: Jones' killer\\
+					$s$: Smith\\
+					\begin{tabular}{l}
+						$O_j$\\
+						$\lnot O_s$\\ \hline
+						$O_s \neq O_j$\\
+					\end{tabular}
+				\item[c]
+					Assume there is an interpretation in which $O_x$ and $\lnot O_y$, but not $O_y \neq O_x$. So there must be two elements of UD, call them 1 and 2, such that $1 \ni O$ and $\lnot (2 \ni O)$, and $2 = 1$. 
+				\item[d]
+					$O_x$: x weighs over 200 pounds\\
+					$j$: Jones' killer\\
+					$s$: Smith\\
+					\begin{tabular}{l}
+						$O_j$\\
+						$\lnot O_s$\\ \hline
+						$O_s \neq O_j$\\
+					\end{tabular}
+
+
+			\end{enumerate}
+		\item
+			\begin{enumerate}
+				\item[b]
+				\item[d]
+			\end{enumerate}
+		\item
+			\begin{enumerate}
+				\item[b]
+				\item[d]
+			\end{enumerate}
+		\item
+			\begin{enumerate}
+				\item[b]
+				\item[d]
+			\end{enumerate}
+	\end{enumerate}
+\end{document}
+

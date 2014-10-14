@@ -208,6 +208,85 @@
 	\end{tabular}\\
 	$UD: \{ 1, 2 \} $\\
 	$C_{xy} = \{ (1,2), (2,1) \}$\\
+	\section{day 15}
+	Universes of Discourse cannot be empty, but predicates can.\\
+	\\
+	\begin{tabular}{>{$} l <{$}}
+		\lnot \exists _x \ni (F_x \land G_x) \\
+		\forall _x (G_x \implies H_x)\\ \hline
+		\forall _x (F_x \implies \lnot H_x)
+	\end{tabular}\\
+	\\
+	$UD = \{ x \}$ \\
+	$F = \{ x \}$ \\
+	$G = \{ \}$ \\
+	$H = \{ x \}$ \\
+	\\
+	To informally prove validity:\\
+	\begin{tabular}{l}
+		$\forall _x(F_x \implies G_x)$\\ \hline
+		$\forall _x(\lnot G_x \implies \lnot F_x)$
+	\end{tabular}\\\\
+	Consider the case in which the premises are true and the conclusion is false. In this case, it must be true that there exists an x that is in F, but not in G, so that the conclusion is false. However, in this case the premise is also false.\\\\
+	Assume there is an interpretation in which $\forall _x(F_x \implies G_x)$ and not  $\forall _x(\lnot G_x \implies \lnot F_x)$. So there must be some element of the UD, call it 1, such that $\lnot (1 \ni G)$ but $1 \ni F$ (b/c conc. false). But then, in this interpretation, $F1 \implies G1$ is false, so $\forall _x(F_x \implies G_x)$ is false. $\rightarrow \leftarrow$ No such interpretation.
+	\section{Day 16}
+	$C_{xy}$: x created y\\
+	"Nothing created everything"\\
+	$\lnot \exists _x \forall _y (C_{xy})$\\
+	$\forall_x \lnot \forall _y (C_{xy})$\\
+	\\
+	\begin{tabular}{|l|}
+		\hline Quantifier Exchange\\ \hline
+		$\lnot \forall _x (...x...) \iff \exists _x \lnot (...x...)$\\
+		$\lnot \exists _x (...x...) \iff \forall _x \lnot (...x...)$\\\hline
+	\end{tabular}\\
+	\\
+	\begin{tabular}{l l}
+		$f(x)$ is discontinuous $\iff$ & $\lnot \forall _{\epsilon} \exists _{\delta} \forall _x 	(|x-c| < \delta \implies |f(x) - f(c)| < \epsilon)$\\
+		& $\exists _{\epsilon} \lnot \exists _{\delta} \forall _x (...)$\\
+		& $\exists _{\epsilon} \forall _{\delta} \lnot \forall _x (...)$\\
+		& $\exists _{\epsilon} \forall _{\delta} \exists _x \lnot (\lnot |x-c| < \delta \lor |f(x) - f(c)| < \epsilon)$\\
+		& $\exists _{\epsilon} \forall _{\delta} \exists _x (|x-c| < \delta \land |f(x) - f(c)| \geq \epsilon)$\\
+	\end{tabular}
 
+	\section{Day 17}
+	$S_{xy}$: x is continuous at y\\
+	$f:$ our fcn\\
+	$c:$ the point in question (in this case, 0)\\
+	$C_{xy}:$ x converges to y\\
+	you may use fcn notation in your sentence.\\
+	\\\\
+	\begin{tabular}{l l}	
+		$\lnot S_{fc}$ & $\iff \lnot \forall _x (C_{xc} \implies C_{f(x)f(c)})$\\
+		& $\iff \exists _x \lnot(\lnot C_{xc} \lor C_{f(x)f(c)})$\\
+		& $\iff \exists _x (C_{xc} \land \lnot C_{f(x)f(c)})$\\
+	\end{tabular}\\
+	\\
+	UD = \{a,b,...\}\\
+	$P_x:$ \\
+	a: Alec\\
+	b: Basab\\
+	\begin{tabular}{l >{$}l>{$} l}
+		1. & \exists _x & P \\
+		2. & P_c & EI(1)\\
+		3. & &\\
+	\end{tabular}\\
+	\\
+	This argument is unsound, for its conclusion is false, and no sound argument has a false conclusion.
+	$S_x:$ X is sound.\\
+	$C_x:$ X's conclusion is true.\\
+	\\
+	\begin{tabular}{l}
+		$\lnot C_x$\\
+		$\lnot \exists _x (S_x \land \lnot C_x)$\\ \hline
+		$\forall _x(\lnot C_x \implies \lnot S_x)$\\ \hline
+		$\lnot S_x$
+	\end{tabular}
+	\begin{tabular}{l l}
+		1. $\lnot C_a$ & $P_1$\\
+		2. $\forall _x(\lnot C_x \implies \lnot S_x)$ & $P_2$\\
+		3. $\lnot C_a \implies \lnot S_a$ & UI(2)\\
+		4. $\lnot S_x$ & MP(1,3)\\
+	\end{tabular}
 \end{document}
 
