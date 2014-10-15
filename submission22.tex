@@ -13,6 +13,28 @@
 
 \begin{document}
 	\maketitle
+	\section{Problems 2.8.3}
+	\begin{enumerate}
+		\item
+			Since $f(x) = ax^2 + bx + c$ is a quadratic function, then $\frac{-b \pm \sqrt{b^2-4ac}}{2a} = x_0$ where $f(x_0) = 0$. $\frac{-b \pm \sqrt{b^2-4ac}}{2a} = x_0 = \pm 1$, so $f(\pm 1) = 0$.
+		\item
+			The conclusion is stated  
+		\item
+			$S_{xy}$: x is continuous at y\\
+			$f:$ our fcn\\
+			$c:$ the point in question (in this case, 0)\\
+			$C_{xy}:$ x converges to y\\
+			\\
+			\begin{tabular}{l l l}
+				$S_{fc}$ & $\iff \forall _x (C_{xc} \implies C_{f(x)f(c)})$ & Our definition of continuous.\\
+				$\lnot S_{fc}$ & $\iff \lnot \forall _x (C_{xc} \implies C_{f(x)f(c)})$ & Our definition of not continuous.\\
+				& $\iff \exists _x \lnot(\lnot C_{xc} \lor C_{f(x)f(c)})$\\
+				& $\iff \exists _x (C_{xc} \land \lnot C_{f(x)f(c)})$\\
+			\end{tabular}\\
+			\\
+			Therefore, we need to show that there exists a function (call it $g(x)$) that does not converge at 0 and that our function (call it $f(x)$) does not converge at f(g(
+		\item
+	\end{enumerate}
 	\section{Arguments in English 2.8.4}
 	\begin{enumerate}
 		\item
@@ -117,7 +139,7 @@
 						6. $L_{po} \land L_{op}$ & Conj(5,6)\\
 					\end{tabular}
 			\end{enumerate}
-		\item[7.]
+		\item
 			\begin{enumerate}
 				\item[a]
 					$S_x$: x is sound\\
@@ -129,6 +151,8 @@
 						$\lnot S_a$\\
 					\end{tabular}
 				\item[b]
+					Valid\\
+					Sound
 				\item[c]
 					Assume there is an interpretation in which $\lnot C_x$ and $\lnot \exists _x (S_x \land \lnot C_x)$ are both true, but $\lnot S_x$ is false. So there must be some element of UD, call it 1, such that $(1 \ni S)$ and $\lnot (1 \ni C)$. However, the second premise would be false in this interpretation. $\rightarrow \leftarrow$ No such interpretation.i
 				\item[d]
@@ -146,9 +170,8 @@
 						8. $\lnot C_a \implies \lnot S_a$ & CP(7)\\
 						4. $\lnot S_a$ & MP(1,8)\\
 					\end{tabular}
-
 			\end{enumerate}
-		\item[8.]
+		\item
 			\begin{enumerate}
 				\item[a]
 					$O_x$: x weighs over 200 pounds\\
@@ -165,29 +188,67 @@
 					$O_x$: x weighs over 200 pounds\\
 					$j$: Jones' killer\\
 					$s$: Smith\\
-					\begin{tabular}{l}
-						$O_j$\\
-						$\lnot O_s$\\ \hline
-						$O_s \neq O_j$\\
+					\begin{tabular}{l l}
+						$O_j$ & $P_1$\\
+						$\lnot O_s$ & $P_2$\\
+						$\lnot (O_s \iff O_j)$ & \\
+						$\forall _x \forall _y(x=y \implies (P_x \iff P_y))$ & Leibniz\\
+						$\forall _x \forall _y(\lnot (P_x \iff P_y) \implies x \neq y)$ & CP\\
+						$O_s \neq O_j$ & MP\\
+					\end{tabular}
+			\end{enumerate}
+		\item
+			\begin{enumerate}
+				\item[b]
+					Valid\\
+					Not sound	
+				\item[d]
+					$L_{xy}$: x likes y\\ 
+					$m$: mandy\\
+					$a$: andy\\
+					\begin{tabular}{l l}
+						1. $\forall _x(L_{xm})$ & $P_1$\\
+						2. $\forall _x(L_{mx} \iff (m = a))$ & $P_2$\\
+						3. $L_{mm}$ & UI(1)\\
+						4. $L_{mm} \iff (m = a)$ & UI(2)\\
+						5. $(L_{mm} \implies (m = a)) \land ((m = a) \implies L_{mm})$ & Equiv(4)\\
+						6. $L_{mm} \implies (m = a)$ & Simp(5)\\
+						7. $m = a$ & MP(3,6)
 					\end{tabular}
 
-
 			\end{enumerate}
 		\item
 			\begin{enumerate}
 				\item[b]
+					Valid\\
+					Sound
 				\item[d]
-			\end{enumerate}
-		\item
-			\begin{enumerate}
-				\item[b]
-				\item[d]
-			\end{enumerate}
-		\item
-			\begin{enumerate}
-				\item[b]
-				\item[d]
+					$A_{xy}$: x if afraid of y\\ 
+					$h$: Mr. Hyde\\
+					$j$: Dr. Jekyll\\
+					\begin{tabular}{l l}
+						1. $\forall _x (A_{xh})$\\
+						2. $\forall _x (A_{hx} \iff (x = j))$\\
+						3. $A_{hh}$ & UI(1)\\
+						4. $A_{hh} \iff (h = j)$ & UI(2)\\
+						5. $(L_{hh} \implies (h = j)) \land ((h = j) \implies L_{hh})$ & Equiv(4)\\
+						6. $L_{hh} \implies (h = j)$ & Simp(5)\\
+						7. $j = h$
+					\end{tabular}
 			\end{enumerate}
 	\end{enumerate}
+	\section{Arguments in quantificational logic 2.8.5}
+	\begin{enumerate}
+		\item[2.]
+			\begin{enumerate}
+				\item[b]
+					Assume the premise is true. In order for it to be true in all cases that an element of F must be within G, all elements of F must be contained within G. Therefore, if an element is not in G, it cannot be within F.
+				\item[c]
+					\begin{tabular}{l l}
+				1. $\forall _x(F_x \implies G_x)$ & $P_1$\\
+				2. $\forall _x(\lnot G_x \implies \lnot F_x) & MP(1)\\
+			\end{tabular}
+	\end{enumerate}
+\end{enumerate}
 \end{document}
 
