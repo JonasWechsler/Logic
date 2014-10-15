@@ -18,7 +18,7 @@
 		\item
 			Since $f(x) = ax^2 + bx + c$ is a quadratic function, then $\frac{-b \pm \sqrt{b^2-4ac}}{2a} = x_0$ where $f(x_0) = 0$. $\frac{-b \pm \sqrt{b^2-4ac}}{2a} = x_0 = \pm 1$, so $f(\pm 1) = 0$.
 		\item
-			The conclusion is stated  
+			The conclusion is stated as a premise.
 		\item
 			$S_{xy}$: x is continuous at y\\
 			$f:$ our fcn\\
@@ -32,8 +32,11 @@
 				& $\iff \exists _x (C_{xc} \land \lnot C_{f(x)f(c)})$\\
 			\end{tabular}\\
 			\\
-			Therefore, we need to show that there exists a function (call it $g(x)$) that does not converge at 0 and that our function (call it $f(x)$) does not converge at f(g(
+			You have to find a sequence $x$, such that it converges to c, but $f(x)$ is not continuous at $f(c)$.
 		\item
+			$S_{xy}$: x converges to y.\\
+			$x_n$: x is a series.\\
+			$\forall _{x_n}(S_{x_n 3} \implies S_{{x_n}^2-1, 3^2-1})$
 	\end{enumerate}
 	\section{Arguments in English 2.8.4}
 	\begin{enumerate}
@@ -154,7 +157,7 @@
 					Valid\\
 					Sound
 				\item[c]
-					Assume there is an interpretation in which $\lnot C_x$ and $\lnot \exists _x (S_x \land \lnot C_x)$ are both true, but $\lnot S_x$ is false. So there must be some element of UD, call it 1, such that $(1 \ni S)$ and $\lnot (1 \ni C)$. However, the second premise would be false in this interpretation. $\rightarrow \leftarrow$ No such interpretation.i
+					Assume there is an interpretation in which $\lnot C_x$ and $\lnot \exists _x (S_x \land \lnot C_x)$ are both true, but $\lnot S_x$ is false. So there must be some element of UD, call it 1, such that $(1 \ni S)$ and $\lnot (1 \ni C)$. However, the second premise would be false in this interpretation. $\rightarrow \leftarrow$ No such interpretation.
 				\item[d]
 					$S_x$: x is sound\\
 					$C_x$: x has a true conclusion\\
@@ -245,10 +248,11 @@
 					Assume the premise is true. In order for it to be true in all cases that an element of F must be within G, all elements of F must be contained within G. Therefore, if an element is not in G, it cannot be within F.
 				\item[c]
 					\begin{tabular}{l l}
-				1. $\forall _x(F_x \implies G_x)$ & $P_1$\\
-				2. $\forall _x(\lnot G_x \implies \lnot F_x) & MP(1)\\
-			\end{tabular}
+						1. $\forall _x(F_x \implies G_x)$ & $P_1$\\
+						2. $F_x \implies G_x$ & UI(1)\\
+						3. $\forall _x(\lnot G_x \implies \lnot F_x)$ & UG(2)\\
+					\end{tabular}
+			\end{enumerate}
 	\end{enumerate}
-\end{enumerate}
 \end{document}
 
