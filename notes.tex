@@ -2,7 +2,9 @@
 \usepackage[utf8]{inputenc}
 \usepackage{enumerate}
 \usepackage{amsmath}
+\usepackage{amssymb}
 \usepackage{array}
+\usepackage[all]{xy}
 
 \title{Get logic'd}
 \author{Jonas Wechsler}
@@ -257,7 +259,7 @@
 	you may use fcn notation in your sentence.\\
 	\\\\
 	\begin{tabular}{l l}
-		\lnot S_{fc}$ & $\iff \lnot \forall _x (C_{xc} \implies C_{f(x)f(c)})$\\	
+		$\lnot S_{fc}$ & $\iff \lnot \forall _x (C_{xc} \implies C_{f(x)f(c)})$\\	
 		$\lnot S_{fc}$ & $\iff \lnot \forall _x (C_{xc} \implies C_{f(x)f(c)})$\\
 		& $\iff \exists _x \lnot(\lnot C_{xc} \lor C_{f(x)f(c)})$\\
 		& $\iff \exists _x (C_{xc} \land \lnot C_{f(x)f(c)})$\\
@@ -267,7 +269,7 @@
 	$P_x:$ \\
 	a: Alec\\
 	b: Basab\\
-	\begin{tabular}{l >{$}l>{$} l}
+	\begin{tabular}{l >{$}l<{$} l}
 		1. & \exists _x & P \\
 		2. & P_c & EI(1)\\
 		3. & &\\
@@ -289,5 +291,61 @@
 		3. $\lnot C_a \implies \lnot S_a$ & UI(2)\\
 		4. $\lnot S_x$ & MP(1,3)\\
 	\end{tabular}
+	
+	\section{Day }
+	To define a function, specify input, output, function.\\
+	\\
+	$f(X) = 2x+3$ and $f:\mathbb{R} \implies \mathbb{R}$\\
+	Input: Domain (familiar)\\
+	Output: NOT "Range", instead Codomain\\
+	Restricted to output: Image\\
+	e.g. for function $f(x)=x^2$, Domain is Reals, Domain \underline{could be} reals, Image is \underline{only} reals greater than 0.\\
+	\\
+	\begin{enumerate}
+		\item[8]
+			$f(x,y)= ...$\\
+			$f:\mathbb{R}^2 \implies \mathbb{R}$\\
+			$g:\mathbb{R} \implies \mathbb{R}$\\
+			$f(x,y) = x+y$\\
+			$g(x) = x$
+	\end{enumerate}
+	\\
+	$\mathbb{R}^2 = \mathbb{R} X \mathbb{R}$\\
+	\\
+	\textbf{Surjectivity}(onto)\\
+	\begin{displaymath}
+		\xymatrix{A & B\\
+				\bullet \ar[r] & \bullet\\
+				\bullet \ar[r] & \bullet\\
+				& \bullet}
+	\end{displaymath}\\
+	This is NOT Surjective\\
+	Everything in the codomain gets "Hit".
+	\textbf{Injectivity}(one-to-one)\\
+	\begin{displaymath}
+		\xymatrix{
+			A & B\\
+			\bullet \ar[r] & \bullet\\
+			\bullet \ar[ur] & \bullet\\
+			& \bullet\\
+	\end{displaymath}\\
+	This is NOT Injective\\
+	Different Xs map to different Ys.\\
+	\begin{enumerate}
+		\item[7]
+			\begin{tabular}{l l}
+				1. $forall _x (f(x,0)=x)$ & $P_1$\\
+				2. $\forall _x (f(x,g(x)) = 0)$ & $P_2$\\
+				3. $\forall _x \forall _y f(x,y) = f(y,x)$ & $P_3$\\
+				4. $\exists _x (f(x,0) = x)$ & EG(1)\\
+				5. $\exists _x (f(x,g(x)) = 0$ & EG(2)\\
+				6. $\exists _x \exists _y(f(x,y)=f(y,x))$ & EG()\\
+				7. $f(0,g(0)) = 0$ & UI(5)\\
+				8. $f(0,g(0)) = f(g(0),0)$ & UI(6)\\
+				9. $f(g(0),0) = 0$ & Subst(7,8)\\
+				10. $\exists _x (f(g(x),0) = x)$ & EG(9)\\
+				11. $\exists _x (x = g(x))$ & Subst(4,10)\\
+			\end{tabular}
+	\end{enumerate}
 \end{document}
 
