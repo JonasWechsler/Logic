@@ -3,34 +3,35 @@
 \usepackage[margin=1in]{geometry}
 \usepackage{enumerate}
 \usepackage{amsmath}
+\usepackage{amssymb}
 \usepackage{amstext}
 \usepackage{array}
 \newcommand{\thf}{\rule{\textwidth}{.4pt}}
 
-\title{Submission 2.2}
+\title{Submission 3.1}
 \author{Jonas Wechsler}
-\date{October 2014}
+\date{Cheshvan 2014}
 
 \begin{document}
 	\maketitle
 	\begin{enumerate}
 		\item
-			$Lxy: x loves y$\\
+			$Lxy:$ x loves y\\
 			No
 		\item
-			$Mxy: x is the mother of y$\\
+			$Mxy:$x is the mother of y\\
 			No
 		\item
-			$Cxy: x is the child of y$\\
+			$Cxy:$ x is the child of y\\
 			Yes
 		\item
-			$Hxy: x is the height of y$\\
+			$Hxy:$ x is the height of y\\
 			No
 		\item
-			$Hxy: y is the height of x$\\
+			$Hxy:$ y is the height of x\\
 			No
 		\item
-			$Fxy: y is the first (legal) wife of x$\\
+			$Fxy:$ y is the first (legal) wife of x\\
 			No (not everybody is married)
 		\item
 			\begin{tabular}{l l}
@@ -65,25 +66,47 @@
 		\item
 			Surjective but not injective
 		\item
-			Both
+			Both\\
+			Every natural number has a unique representation in roman numerals, therefore $f$ is surjective. No two natural numbers have the same representation in Roman Numberals. Therefore $f$ is injective.
 		\item
-			Surjective but not injective
+			Surjective but not injective\\
+			Consider that $f(1)=a$ and $f(27)=a$ and $1 \neq 27$, so $f$ is not injective.  Additionally, and that the domain is $\mathbb{R}$, while the codomain is restricted to letters $a$ through $z$, and every element in B is pointed to by at least one element in A. Therefore $f$ is surjective.
 		\item
-			Injective but not surjective
+			Injective but not surjective\\
+$\neg \exists x (f(x) = 1 \land x \in Domain(f))$. Therefore $f$ is not surjective.
+If $f(x_1) = y = f(x_2)$, then $2 x_1 = 2 x_2$ so $x_1 = x_2$. Therfore $f$ is injective.
 		\item
-			Both
+			Both\\
+Given any $y \in Codomain(f)$, $f(y - 1) = y$, so $\forall y \exists x (y \in Codomain(f) \implies (f(x) = y \land x \in Domain(f)))$, so $f$ is surjective.
+If $f(x_1) = y = f(x_2)$, then $x_1 - 1 = x_2 - 1$ so $x_1 = x_2$. Therefore, $f$ is injective.	
 		\item
-			Neither
+			Neither\\
+$\neg \exists x (f(x) = -1 \land x \in Domain(f))$, so $f$ is not surjective.
+$f(-2) = 4 = f(2)$, but $2 \neq -2$, so $f$ is not injective.
 		\item
-			Both
+			Both\\
+Given any $y \in Codomain(f)$, $f(\sqrt[3]{y}) = y$. Therefore $\forall y \exists x (y \in Codomain(f) \implies (f(x) = y \land x \in Domain (f)))$. Therefore $f$ is surjective.
+If $f(x_1) = y = f(x_2)$, then $x_1^3 = x_2^3 $. $f(\sqrt[3]{x_1})=f(\sqrt[3]{x_2})$, where $\sqrt[3]{x}$ is a function, so $x_1 = x_2$. Therfore $f$ is injective.
 		\item
-			Injective but not surjective
+			Injective but not surjective\\
+$\neg \exists x (f(x) = -1 \land x \in Domain(f))$. Therefore $f$ is not surjective.
+$f(x_1) = f(x_2) \implies f(ln(x_1)) = f(ln(x_2))$, where $ln(x)$ is a function,$ \implies e^{ln(x_1)} = e^{ln(x_2)} \implies x_1 = x_2$. Therefore $f$ is injective.
 		\item
-			Neither
+			Neither\\
+			The number 2 exists in the Codomain of f, but $\sin^{-1} 2$ does not exist. Therefore, not all things in the Codomain of f exist in the image, so if is not surjective. $ f(0) = 0 = f(2 \pi) $. Therefore $f$ is not injective.
+
 		\item
-			Surjective but not injective
+			Surjective but not injective\\
+Given any $y \in Codomain(f)$, $f(\sin^{-1} y) = y$. Therefore $\forall y \exists x (y \in Codomain(f) \implies (f(x) = y \land x \in Domain(f)))$. Therefore $f$ is surjective.
+
+$ f(0) = 0 = f(2 \pi) $. Therefore $f$ is not injective.
+
 		\item			
-			Surjective but not injective
+			Surjective but not injective\\
+Given any $y \in Codomain(f)$, $f(y) = y$. Therefore $\forall y \exists x (y \in Codomain(f) \implies (f(x) = y \land x \in Domain(f)))$. Therefore $f$ is surjective.
+
+$f(.2) = 0 = f(.1)$, but $\frac{1}{2} \neq \frac{1}{3}$.
+
 	\end{enumerate}
 \end{document}
 
