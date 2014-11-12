@@ -18,7 +18,7 @@
 		\item
 			$P_0:$ If only one student has a black card, they know that they are the only one with a black card because they do not see anybody else with a black card.\\
 			Assume that it takes exactly k repetitions for k students with black cards.\\
-
+			Consider $k+1$ students with black cards, and an individual $A$ who has a black cards. After $k$ turns, all the other students with black cards say nothing, so $A$ can infer that he has a black card, and will say yes on the next turn.
 		\item
 			$P_0: 1^3 + 5*1 = 6, \frac{6}{6} = 1 \land 1 \epsilon \mathbb{N}$\\
 			$P_k:$ Assume $k^3 + 5k$ is divisible by 6.\\
@@ -56,18 +56,30 @@
 					$codom(s) = \mathbb{R} > 0$\\
 				\item
 					\begin{tabular}{l l}
-						$P_0:$ & $ e - s(1) < \frac{1}{(1+1)!}(1)$\\
-						& $e - \frac{1}{1} - \frac{1}{1} < frac{1}{2}$\\
-						& $e - 2 < \frac{1}{2}$\\
-						\\
-						$P_k$ & $ e - s(k) < \frac{1}{(k+1)!}(1+\frac{1}{k+1} + \frac{1}{(k+1)^2} + ...)$\\\\
-						$P_{k+1}$ & $ e - s(k+1) < \frac{1}{(k+1)!} (1+\frac{1}{k+1}+\frac{1}{(k+1)^2} + ... + \frac{1}{(k+1)^{k+1}})$\\
-						& $ e - s(k) - \frac{1}{k!} < \frac{1}{(k+1)!}(1+...) + \frac{1}{(k+1)!} \frac{1}{(k+1)^{k+1}}$\\
-					\end{tabular}
+						$e-s(k)$ & $ = \sum\limits_{i=0}^{\infty} \frac{1}{i!} - \sum\limits_{i=0}^{k} \frac{1}{i!}$\\
+						& $= \sum\limits_{i=k+1}^{\infty} \frac{1}{i!} $\\
+						& $= \frac{1}{(k+1)!} + \frac{1}{(k+2)(k+1)!} + \frac{1}{(k+3)(k+2)(k+1)!}$\\
+					\end{tabular}\\
+					where $n > 1$, $\frac{1}{k+n} < \frac{1}{k+1}$ therefore \\
+					$= \frac{1}{(k+1)!} + \frac{1}{(k+1)(k+1)!} + \frac{1}{(k+1)^2(k+1)!} >$ the previous statement. \\
+					therefore $e-s(n) < \frac{1}{(n+1)!}(\frac{1}{(n+1)} + \frac{1}{(n+1)^2} + ... )$\\	
 					$\frac{1}{k!} < \frac{1}{(k+1)!} \frac{1}{(k+1)^{k+1}}$ because $k! > (k+1)!$ and $\frac{1}{(k+1)!} < 1$ and $\frac{1}{(k+1)^{k+1}}$.\\
 				\item
+					Because an infinite geometric series $\sum\limits_{i=0}^{n}a*r^n$ can be written as $\frac{a}{1-r}$, the infinite geometric series in this problem can be written as.\\
+					\begin{tabular}{l l}
+						$e - s(k)$ & $< \frac{1}{(k+1)!}\frac{1}{1-\frac{1}{k+1}}$\\
+						& $< \frac{1}{(k+1)!}\frac{1}{\frac{k+1-1}{k+1}}$\\
+						& $< \frac{1}{(k+1)!}\frac{1}{\frac{k}{k+1}}$\\
+						& $< \frac{1}{(k+1)!}\frac{1}{\frac{k+1}{k}}$\\
+						& $< \frac{1}{k*k!}$\\
+					\end{tabular}\\
+				\item
+					If $r = \frac{m}{n}$,  $n! e = n! \frac{m}{n} = (n-1)! m$\\
+					and $n! s(n) = n! \sum\limits_{i=0}^n \frac{1}{i!}$ $=$ $\sum\limits_{i=0}^n \frac{n!}{i!}$. At this point, the denominator always cancels out with a portion of the numberator, because $n \geq i$.
+				\item $e-s(n) < \frac{1}{n!*n}$ where $n \epsilon \mathbb{N}$, so $n!(e-s(n)) < \frac{1}{n}$, which means $n!(e-s(n))$ ranges from $\{\frac{1}{1},\frac{1}{2}, ..., \frac{1}{\infty} = 0 \}$, or from [0,1] and $n!(e-s(n))$ must be positive because s(n) is smaller than e and n is a natural number, therefore it ranges from [0,1]\\
+					however $n!(e-s(n)) = n!*e - n!(s(n))$ and both of those are integers if $e=\frac{m}{n}$, so $n!(e-s(n))$ must be an integer.
+					therefore $n!(e-s(n))$ must be an integer between 0,1
 			\end{enumerate}
-
 	\end{enumerate}
 \end{document}
 
